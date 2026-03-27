@@ -39,10 +39,10 @@ export default function RootLayout({
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9279583389810634" crossOrigin="anonymous"></script>
         <meta name="google-adsense-account" content="ca-pub-9279583389810634" />
         <link rel="canonical" href="https://www.puertadebisagra.com/" />
+        <link rel="alternate" hrefLang="es" href="https://www.puertadebisagra.com/es/" />
         <link rel="alternate" hrefLang="en" href="https://www.puertadebisagra.com/en/" />
-        <link rel="alternate" hrefLang="zh" href="https://www.puertadebisagra.com/zh/" />
+        <link rel="alternate" hrefLang="zh-Hant" href="https://www.puertadebisagra.com/zh-Hant/" />
         <link rel="alternate" hrefLang="fr" href="https://www.puertadebisagra.com/fr/" />
-        <link rel="alternate" hrefLang="it" href="https://www.puertadebisagra.com/it/" />
         <link rel="alternate" hrefLang="x-default" href="https://www.puertadebisagra.com/" />
       </head>
       <body

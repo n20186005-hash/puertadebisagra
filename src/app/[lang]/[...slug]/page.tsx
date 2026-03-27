@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-type Lang = 'en' | 'zh' | 'fr' | 'it';
+type Lang = 'en' | 'zh-Hant' | 'fr' | 'es';
 
 const content: Record<Lang, Record<string, {
   title: string;
@@ -49,7 +49,7 @@ const content: Record<Lang, Record<string, {
       rejectAll: 'Reject All',
     },
   },
-  zh: {
+  'zh-Hant': {
     privacy: {
       title: '隱私政策',
       lastUpdate: '最後更新：2026 年 3 月',
@@ -123,50 +123,50 @@ const content: Record<Lang, Record<string, {
       rejectAll: 'Refuser',
     },
   },
-  it: {
+  es: {
     privacy: {
-      title: 'Informativa sulla privacy',
-      lastUpdate: 'Ultimo aggiornamento: Marzo 2026',
+      title: 'Política de privacidad',
+      lastUpdate: 'Última actualización: Marzo 2026',
       sections: [
-        { heading: '1. Raccolta di informazioni', text: 'Ci impegniamo a proteggere la vostra privacy. Questo sito funziona principalmente come piattaforma informativa e generalmente non raccoglie attivamente informazioni personali identificabili dagli utenti. Tuttavia, attraverso i log del server e gli strumenti di analisi, potremmo raccogliere informazioni non identificabili personalmente come il tipo di browser, gli orari di accesso e i registri delle visualizzazioni delle pagine.' },
-        { heading: '2. Utilizzo dei cookie', text: 'Per offrire una migliore esperienza utente e capire come viene utilizzato il sito, potremmo utilizzare i cookie. Questi cookie vengono utilizzati per ricordare le preferenze degli utenti e analizzare il traffico del sito. Potete regolare le impostazioni dei cookie nel vostro browser.' },
-        { heading: '3. Link di terze parti', text: 'Questo sito potrebbe contenere link a siti web di terze parti (come Google Maps). Non siamo responsabili delle pratiche sulla privacy di questi siti esterni. Vi incoraggiamo a leggere le dichiarazioni sulla privacy di ogni sito che raccoglie informazioni personali quando lasciate il nostro sito.' },
-        { heading: '4. Contattaci', text: 'Se avete domande o preoccupazioni regarding questa informativa sulla privacy, vi preghiamo di contattarci a: claritleonelmnicol@gmail.com' },
+        { heading: '1. Recopilación de información', text: 'Nos comprometemos a proteger su privacidad. Este sitio sirve principalmente como plataforma de información y generalmente no recopila activamente información de identificación personal de los usuarios. Sin embargo, a través de registros de servidor y herramientas de análisis, podemos recopilar información no identificable personalmente, como el tipo de navegador, los tiempos de acceso y los registros de visitas a la página.' },
+        { heading: '2. Uso de cookies', text: 'Para ofrecer una mejor experiencia de usuario y comprender cómo se utiliza el sitio, podemos utilizar cookies. Estas cookies se utilizan para recordar las preferencias del usuario y analizar el tráfico del sitio. Puede ajustar la configuración de las cookies en su navegador.' },
+        { heading: '3. Enlaces de terceros', text: 'Este sitio puede contener enlaces a sitios web de terceros (por ejemplo, Google Maps). No somos responsables de las prácticas de privacidad de estos sitios externos. Le recomendamos que lea las declaraciones de privacidad de cada sitio que recopila información personal cuando abandona nuestro sitio.' },
+        { heading: '4. Contáctenos', text: 'Si tiene alguna pregunta o inquietud sobre esta política de privacidad, contáctenos en: claritleonelmnicol@gmail.com' },
       ],
-      backHome: 'Torna alla home',
+      backHome: 'Volver al inicio',
     },
     terms: {
-      title: 'Termini di servizio',
-      lastUpdate: 'Ultimo aggiornamento: Marzo 2026',
+      title: 'Términos de servicio',
+      lastUpdate: 'Última actualización: Marzo 2026',
       sections: [
-        { heading: '1. Accettazione dei termini', text: 'Accedendo e utilizzando questo sito web, accetti di essere vincolato da questi termini di servizio. Se non accetti parte di queste condizioni, ti preghiamo di non utilizzare questo sito.' },
-        { heading: '2. Utilizzo del contenuto', text: 'Le informazioni fornite su questo sito web sono solo a scopo informativo generale. Sebbene ci impegniamo a mantenere informazioni accurate e aggiornate, non facciamo alcuna rappresentazione o garanzia di alcun tipo, espressa o implicita, in merito alla completezza, accuratezza, affidabilità o idoneità delle informazioni.' },
-        { heading: '3. Proprietà intellettuale', text: 'Se non diversamente indicato, tutti i contenuti di questo sito (inclusi testi, immagini, loghi) sono protetti da copyright. Nessuna riproduzione, distribuzione o uso commerciale è autorizzata senza autorizzazione esplicita. I crediti fotografici possono includere risorse libere da diritti da piattaforme come Unsplash o contributori su Google Maps.' },
-        { heading: '4. Limitazione di responsabilità', text: 'Nella misura massima consentita dalla legge, questo sito e i suoi proprietari non saranno responsabili per danni diretti, indiretti, incidentali o consequenziali derivanti dall\'uso o dall\'incapacità di utilizzare questo sito. Quando visitate siti naturali, vi preghiamo sempre di dare priorità alla sicurezza.' },
+        { heading: '1. Aceptación de los términos', text: 'Al acceder y utilizar este sitio web, usted acepta estar sujeto a estos términos de servicio. Si no acepta alguna parte de estas condiciones, no utilice este sitio.' },
+        { heading: '2. Uso del contenido', text: 'La información proporcionada en este sitio web es solo para fines informativos generales. Aunque nos esforzamos por mantener la información precisa y actualizada, no hacemos ninguna representación o garantía de ningún tipo, expresa o implícita, sobre la integridad, precisión, confiabilidad o idoneidad de la información.' },
+        { heading: '3. Propiedad intelectual', text: 'A menos que se indique lo contrario, todo el contenido de este sitio (incluidos textos, imágenes, logotipos) está protegido por derechos de autor. No se autoriza ninguna reproducción, distribución o uso comercial sin permiso explícito. Los créditos fotográficos pueden incluir recursos libres de regalías de plataformas como Unsplash o contribuyentes en Google Maps.' },
+        { heading: '4. Limitación de responsabilidad', text: 'En la máxima medida permitida por la ley, este sitio y sus propietarios no serán responsables de los daños directos, indirectos, incidentales o consecuentes que surjan del uso o la imposibilidad de usar este sitio. Al visitar sitios naturales, siempre priorice la seguridad.' },
       ],
-      backHome: 'Torna alla home',
+      backHome: 'Volver al inicio',
     },
     cookies: {
-      title: 'Impostazioni dei cookie',
-      lastUpdate: 'Ultimo aggiornamento: Marzo 2026',
-      description: 'Utilizziamo i cookie per migliorare la tua esperienza di navigazione. Puoi scegliere di accettare o rifiutare alcuni tipi di cookie. Ti preghiamo di notare che la disattivazione di alcuni cookie potrebbe influenzare la funzionalità del sito web.',
+      title: 'Configuración de cookies',
+      lastUpdate: 'Última actualización: Marzo 2026',
+      description: 'Utilizamos cookies para mejorar su experiencia de navegación. Puede elegir aceptar o rechazar ciertos tipos de cookies. Tenga en cuenta que deshabilitar algunas cookies puede afectar la funcionalidad del sitio web.',
       categories: [
-        { id: 'necessary', title: 'Cookie strettamente necessari', description: 'Questi cookie sono sempre attivi. Sono necessari per il funzionamento del sito Web e non possono essere disattivati nei nostri sistemi. Generalmente vengono impostati in risposta alle azioni da te compiute che equivalgono a una richiesta di servizi, come la definizione delle tue preferenze di privacy o della lingua.', required: true },
-        { id: 'analytics', title: 'Cookie di analisi', description: 'Questi cookie ci permettono di contare le visite e le fonti di traffico in modo che possiamo misurare e migliorare le prestazioni del nostro sito. Ci aiutano a sapere quali pagine sono le più popolari e come i visitatori si spostano sul sito.', required: false },
-        { id: 'marketing', title: 'Cookie di marketing', description: 'Questi cookie possono essere impostati all\'interno del nostro sito Web dai nostri partner pubblicitari. Possono essere utilizzati da queste società per creare un profilo dei tuoi interessi e mostrarti pubblicità rilevanti su altri siti Web.', required: false },
+        { id: 'necessary', title: 'Cookies estrictamente necesarias', description: 'Estas cookies siempre están activas. Son necesarias para que el sitio web funcione y no se pueden desactivar en nuestros sistemas. Generalmente solo se configuran en respuesta a acciones realizadas por usted que equivalen a una solicitud de servicios, como establecer sus preferencias de privacidad o idioma.', required: true },
+        { id: 'analytics', title: 'Cookies de análisis', description: 'Estas cookies nos permiten contar las visitas y las fuentes de tráfico para que podamos medir y mejorar el rendimiento de nuestro sitio. Nos ayudan a saber qué páginas son las más populares y cómo se mueven los visitantes por el sitio.', required: false },
+        { id: 'marketing', title: 'Cookies de marketing', description: 'Nuestros socios publicitarios pueden configurar estas cookies en nuestro sitio web. Estas empresas pueden utilizarlas para crear un perfil de sus intereses y mostrarle anuncios relevantes en otros sitios web.', required: false },
       ],
-      backHome: 'Torna alla home',
-      acceptAll: 'Accetta tutto',
-      rejectAll: 'Rifiuta tutto',
+      backHome: 'Volver al inicio',
+      acceptAll: 'Aceptar todo',
+      rejectAll: 'Rechazar todo',
     },
   },
 };
 
 const langNames: Record<Lang, string> = {
   en: 'English',
-  zh: '繁體中文',
+  'zh-Hant': '繁體中文',
   fr: 'Français',
-  it: 'Italiano',
+  es: 'Español',
 };
 
 const BASE_URL = 'https://www.puertadebisagra.com';
@@ -177,12 +177,12 @@ export default async function LegalPage({
   params: Promise<{ lang: string; page: 'privacy-policy' | 'terms-of-service' | 'cookie-settings' }>;
 }) {
   const { lang, page } = await params;
-  const currentLang = (lang as Lang) || 'en';
+  const currentLang = (lang as Lang) || 'es';
   const pageKey = page === 'privacy-policy' ? 'privacy' : page === 'terms-of-service' ? 'terms' : 'cookies';
-  const data = content[currentLang]?.[pageKey] || content.en[pageKey];
+  const data = content[currentLang]?.[pageKey] || content.es[pageKey];
 
   const currentPath = `/${currentLang}/${page}`;
-  const otherLangs: Lang[] = ['en', 'zh', 'fr', 'it'];
+  const otherLangs: Lang[] = ['en', 'zh-Hant', 'fr', 'es'];
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
