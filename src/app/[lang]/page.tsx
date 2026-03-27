@@ -62,14 +62,17 @@ export default async function LocalizedHome({
 
       <main className="max-w-5xl mx-auto px-4 py-20">
         <section className="mb-24 text-center">
+          <p className="text-sm text-gray-500 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed mb-8 italic">
+            {dict.intro.declaration}
+          </p>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10">
             {dict.intro.text}
           </p>
-          <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
+          <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
             {dict.intro.bullets.map((bullet, index) => (
-              <div key={index} className="flex items-start gap-3 bg-gray-50 dark:bg-[#1a1a1a] p-4 rounded-lg">
-                <span className="text-blue-500 mt-1">✓</span>
-                <span className="text-gray-700 dark:text-gray-300 text-sm">{bullet}</span>
+              <div key={index} className="flex items-start gap-3 bg-gray-50 dark:bg-[#1a1a1a] p-4 rounded-lg border border-gray-100 dark:border-gray-800">
+                <span className="text-blue-500 mt-1 flex-shrink-0">✓</span>
+                <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{bullet}</span>
               </div>
             ))}
           </div>
