@@ -18,6 +18,30 @@ export const dictionaries = {
         'Accesibilidad: Entrada accesible para sillas de ruedas, ideal para niños. Atracción al aire libre gratuita.',
       ],
     },
+    gallery: {
+      title: 'Galería de fotos',
+      description: 'Descripciones de la colección de fotos de Google Maps, última actualización en 2026. Para ver todas las imágenes, haga clic en el enlace de la flecha a',
+      linkText: 'Google Maps',
+      viewOriginal: 'Ver original',
+      prevPage: 'Página anterior',
+      nextPage: 'Página siguiente',
+      prevImage: 'Imagen anterior',
+      nextImage: 'Imagen siguiente',
+      close: 'Cerrar',
+      goToPageText: 'Ir a la página'
+    },
+    gallery: {
+      title: '攝影相簿',
+      description: '照片集說明來自 Google Maps，最近更新於 2026 年。如需查看所有圖片，請點擊箭頭跳轉連結到',
+      linkText: 'Google Maps',
+      viewOriginal: '查看原圖',
+      prevPage: '上一頁',
+      nextPage: '下一頁',
+      prevImage: '上一張',
+      nextImage: '下一張',
+      close: '關閉',
+      goToPageText: '跳轉到第'
+    },
     reviews: {
       title: 'Opiniones de visitantes reales',
       declaration: 'Valoraciones y opiniones de Google Maps (última actualización: 2026).\nSolo mostramos una selección de opiniones verificadas con altas puntuaciones. Para ver todas las opiniones completas y más recientes, haga clic en el enlace de abajo.',
@@ -63,6 +87,18 @@ export const dictionaries = {
         '有趣傳說：相傳黑死病曾想通過此門進城，卻被門上的天使阻擋，增添了神秘色彩。',
         '遊覽提示：免費開放的開放式景點，輪椅可通行，非常適合拍照打卡。',
       ],
+    },
+    gallery: {
+      title: '攝影相簿',
+      description: '照片集說明來自 Google Maps，最近更新於 2026 年。如需查看所有圖片，請點擊箭頭跳轉連結到',
+      linkText: 'Google Maps',
+      viewOriginal: '查看原圖',
+      prevPage: '上一頁',
+      nextPage: '下一頁',
+      prevImage: '上一張',
+      nextImage: '下一張',
+      close: '關閉',
+      goToPageText: '跳轉到第'
     },
     reviews: {
       title: '真實遊客評價',
@@ -110,6 +146,18 @@ export const dictionaries = {
         'Accessibility: Wheelchair accessible entrance, good for kids. Free open-air attraction.',
       ],
     },
+    gallery: {
+      title: 'Photo Gallery',
+      description: 'Photo collection descriptions from Google Maps, last updated in 2026. To view all images, please click the arrow link to',
+      linkText: 'Google Maps',
+      viewOriginal: 'View Original',
+      prevPage: 'Previous Page',
+      nextPage: 'Next Page',
+      prevImage: 'Previous Image',
+      nextImage: 'Next Image',
+      close: 'Close',
+      goToPageText: 'Go to page'
+    },
     reviews: {
       title: 'Real Visitor Reviews',
       declaration: 'Ratings and reviews from Google Maps (last updated: 2026).\nWe only show a selection of verified high-scoring reviews. To see all complete and latest reviews, click the link below.',
@@ -155,6 +203,18 @@ export const dictionaries = {
         'Légende : On raconte qu\'un ange gardien sur la porte a empêché la peste noire d\'entrer dans la ville.',
         'Accessibilité : Entrée accessible en fauteuil roulant, adapté aux enfants. Attraction en plein air gratuite.',
       ],
+    },
+    gallery: {
+      title: 'Galerie de photos',
+      description: 'Descriptions de la collection de photos de Google Maps, dernière mise à jour en 2026. Pour voir toutes les images, veuillez cliquer sur le lien fléché vers',
+      linkText: 'Google Maps',
+      viewOriginal: 'Voir l\'original',
+      prevPage: 'Page précédente',
+      nextPage: 'Page suivante',
+      prevImage: 'Image précédente',
+      nextImage: 'Image suivante',
+      close: 'Fermer',
+      goToPageText: 'Aller à la page'
     },
     reviews: {
       title: 'Avis de vrais visiteurs',

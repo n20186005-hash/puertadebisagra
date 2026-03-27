@@ -79,7 +79,18 @@ export default async function LocalizedHome({
         </section>
 
         <section className="mb-24">
-          <Gallery />
+          <Gallery 
+            title={dict.gallery.title}
+            description={dict.gallery.description}
+            linkText={dict.gallery.linkText}
+            viewOriginal={dict.gallery.viewOriginal}
+            prevPage={dict.gallery.prevPage}
+            nextPage={dict.gallery.nextPage}
+            prevImage={dict.gallery.prevImage}
+            nextImage={dict.gallery.nextImage}
+            close={dict.gallery.close}
+            goToPageText={dict.gallery.goToPageText}
+          />
         </section>
 
         <section className="mb-24">

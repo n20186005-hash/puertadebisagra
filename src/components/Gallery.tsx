@@ -12,7 +12,29 @@ const IMAGES_PER_PAGE = 6;
 const TOTAL_PAGES = Math.ceil(images.length / IMAGES_PER_PAGE);
 const GOOGLE_MAPS_LINK = 'https://maps.app.goo.gl/cEiGXn2e9Hx49wSs5';
 
-export default function Gallery() {
+export default function Gallery({
+  title,
+  description,
+  linkText,
+  viewOriginal,
+  prevPage,
+  nextPage,
+  prevImage,
+  nextImage,
+  close,
+  goToPageText
+}: {
+  title: string;
+  description: string;
+  linkText: string;
+  viewOriginal: string;
+  prevPage: string;
+  nextPage: string;
+  prevImage: string;
+  nextImage: string;
+  close: string;
+  goToPageText: string;
+}) {
   const [currentPage, setCurrentPage] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
@@ -60,16 +82,16 @@ export default function Gallery() {
   return (
     <section className="w-full py-12">
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold mb-2">攝影相簿</h2>
-        <p className="text-sm text-gray-500">
-          照片集說明來自 Google Maps，最近更新於 2026 年。如需查看所有圖片，請點擊箭頭跳轉連結到{' '}
+        <h2 className="text-3xl font-bold mb-2 text-gray-800 dark:text-white">{title}</h2>
+        <p className="text-sm text-gray-500 dark:text-gray-400">
+          {description}{' '}
           <a
             href={GOOGLE_MAPS_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 hover:underline"
+            className="text-blue-600 dark:text-blue-400 hover:underline"
           >
-            Google Maps
+            {linkText}
           </a>
         </p>
       </div>
@@ -91,7 +113,7 @@ export default function Gallery() {
               />
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                 <span className="text-white opacity-0 group-hover:opacity-100 group-hover:-translate-y-2 transition-all duration-300 text-sm font-medium">
-                  查看原圖
+                  {viewOriginal}
                 </span>
               </div>
             </div>
@@ -102,8 +124,8 @@ export default function Gallery() {
       <div className="flex items-center justify-center gap-4">
         <button
           onClick={goToPrevious}
-          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
-          aria-label="上一頁"
+          className="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300"
+          aria-label={prevPage}
         >
           ‹
         </button>
@@ -115,18 +137,18 @@ export default function Gallery() {
               onClick={() => goToPage(index)}
               className={`h-2 rounded-full transition-all duration-300 ${
                 index === currentPage
-                  ? 'w-6 bg-orange-500'
-                  : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  ? 'w-6 bg-blue-500'
+                  : 'w-2 bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'
               }`}
-              aria-label={`跳轉到第 ${index + 1} 頁`}
+              aria-label={`${goToPageText} ${index + 1}`}
             />
           ))}
         </div>
 
         <button
           onClick={goToNext}
-          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
-          aria-label="下一頁"
+          className="w-10 h-10 rounded-full border border-gray-300 dark:border-gray-700 flex items-center justify-center hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300"
+          aria-label={nextPage}
         >
           ›
         </button>
@@ -143,7 +165,7 @@ export default function Gallery() {
               lightboxPrev();
             }}
             className="absolute left-4 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-2xl transition-colors"
-            aria-label="上一張"
+            aria-label={prevImage}
           >
             ‹
           </button>
@@ -164,7 +186,7 @@ export default function Gallery() {
               lightboxNext();
             }}
             className="absolute right-4 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white text-2xl transition-colors"
-            aria-label="下一張"
+            aria-label={nextImage}
           >
             ›
           </button>
@@ -175,7 +197,7 @@ export default function Gallery() {
               closeLightbox();
             }}
             className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-            aria-label="關閉"
+            aria-label={close}
           >
             ✕
           </button>
