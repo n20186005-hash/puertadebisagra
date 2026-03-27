@@ -30,18 +30,6 @@ export const dictionaries = {
       close: 'Cerrar',
       goToPageText: 'Ir a la página'
     },
-    gallery: {
-      title: '攝影相簿',
-      description: '照片集說明來自 Google Maps，最近更新於 2026 年。如需查看所有圖片，請點擊箭頭跳轉連結到',
-      linkText: 'Google Maps',
-      viewOriginal: '查看原圖',
-      prevPage: '上一頁',
-      nextPage: '下一頁',
-      prevImage: '上一張',
-      nextImage: '下一張',
-      close: '關閉',
-      goToPageText: '跳轉到第'
-    },
     reviews: {
       title: 'Opiniones de visitantes reales',
       declaration: 'Valoraciones y opiniones de Google Maps (última actualización: 2026).\nSolo mostramos una selección de opiniones verificadas con altas puntuaciones. Para ver todas las opiniones completas y más recientes, haga clic en el enlace de abajo.',
