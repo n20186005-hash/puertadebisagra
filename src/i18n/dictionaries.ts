@@ -52,6 +52,10 @@ export const dictionaries = {
         { name: 'David R.', date: 'Hace 6 meses', rating: 5, text: 'Majestuosa. La mezcla de estilos defensivo y renacentista es perfecta. Es la mejor bienvenida a Toledo.' },
         { name: 'Elena V.', date: 'Hace 1 año', rating: 5, text: 'Un lugar lleno de historia. Puedes imaginar a los reyes pasando por debajo de sus arcos.' },
         { name: 'Juan P.', date: 'Hace 1 año', rating: 5, text: 'Fácil de llegar, imponente. El patio de armas interior es muy bonito y tranquilo.' },
+        { name: 'Miguel A.', date: 'Hace 1 año', rating: 5, text: 'La puerta es el símbolo de la ciudad. Recomiendo pasear por los alrededores para ver las murallas.' },
+        { name: 'Sofía L.', date: 'Hace 2 años', rating: 5, text: 'Una maravilla arquitectónica. Las dos torres circulares son enormes y la historia que encierra es fascinante.' },
+        { name: 'Javier C.', date: 'Hace 2 años', rating: 5, text: 'Excelente estado de conservación. Es un punto de partida perfecto para una ruta a pie por Toledo.' },
+        { name: 'Laura T.', date: 'Hace 3 años', rating: 5, text: 'Simplemente espectacular. El detalle del águila bicéfala en piedra es una verdadera obra de arte renacentista.' },
       ]
     },
     map: {
@@ -110,6 +114,10 @@ export const dictionaries = {
         { name: '張先生', date: '6個月前', rating: 5, text: '保存得非常完好，軍事防禦與文藝復興藝術的完美結合。' },
         { name: 'Chen H.', date: '1年前', rating: 5, text: '站在門下能感覺到自己的渺小，西班牙帝國的榮光依稀可見。' },
         { name: '李小姐', date: '1年前', rating: 5, text: '交通很方便，從火車站走過來第一眼就看到它，震撼！' },
+        { name: '黃大衛', date: '1年前', rating: 5, text: '托萊多的地標之一。建議在附近多走走，順便看看保存完好的中世紀城牆。' },
+        { name: 'Alice W.', date: '2年前', rating: 5, text: '令人驚嘆的建築。兩座巨大的圓形塔樓非常有安全感，背後的歷史故事也很有趣。' },
+        { name: '趙子龍', date: '2年前', rating: 5, text: '維護得非常好的古蹟。作為托萊多徒步之旅的起點再適合不過了。' },
+        { name: '劉太太', date: '3年前', rating: 5, text: '絕對壯觀。石頭上雕刻的雙頭鷹細節滿滿，是真正的文藝復興藝術傑作。' },
       ]
     },
     map: {
@@ -168,6 +176,10 @@ export const dictionaries = {
         { name: 'Michael T.', date: '6 months ago', rating: 5, text: 'Majestic. The perfect blend of defensive and Renaissance styles. The best welcome to Toledo.' },
         { name: 'Emma R.', date: '1 year ago', rating: 5, text: 'A place full of history. You can almost imagine the kings passing beneath its arches.' },
         { name: 'David L.', date: '1 year ago', rating: 5, text: 'Easy to reach, imposing. The inner courtyard is very beautiful and peaceful.' },
+        { name: 'Robert B.', date: '1 year ago', rating: 5, text: 'A true landmark of Toledo. I highly recommend taking a walk around to see the well-preserved medieval walls.' },
+        { name: 'Jessica M.', date: '2 years ago', rating: 5, text: 'An architectural marvel. The two massive circular towers make you feel safe, and the history behind it is fascinating.' },
+        { name: 'William K.', date: '2 years ago', rating: 5, text: 'Excellently preserved monument. It serves as the perfect starting point for a walking tour of Toledo.' },
+        { name: 'Olivia H.', date: '3 years ago', rating: 5, text: 'Absolutely spectacular. The double-headed eagle carved in stone is a true masterpiece of Renaissance art.' },
       ]
     },
     map: {
@@ -226,6 +238,10 @@ export const dictionaries = {
         { name: 'Luc B.', date: 'Il y a 6 mois', rating: 5, text: 'Majestueux. Le mélange parfait de styles défensif et Renaissance. Le meilleur accueil à Tolède.' },
         { name: 'Sophie D.', date: 'Il y a 1 an', rating: 5, text: 'Un lieu chargé d\'histoire. On peut presque imaginer les rois passer sous ses arches.' },
         { name: 'Julien M.', date: 'Il y a 1 an', rating: 5, text: 'Facile d\'accès, imposant. La cour intérieure est très belle et paisible.' },
+        { name: 'Antoine R.', date: 'Il y a 1 an', rating: 5, text: 'Un véritable symbole de la ville. Je recommande de se promener aux alentours pour voir les murailles médiévales bien conservées.' },
+        { name: 'Camille F.', date: 'Il y a 2 ans', rating: 5, text: 'Une merveille architecturale. Les deux immenses tours circulaires donnent un sentiment de sécurité, et l\'histoire qui s\'y rattache est fascinante.' },
+        { name: 'Nicolas T.', date: 'Il y a 2 ans', rating: 5, text: 'Monument excellemment préservé. C\'est le point de départ idéal pour une visite à pied de Tolède.' },
+        { name: 'Élodie P.', date: 'Il y a 3 ans', rating: 5, text: 'Absolument spectaculaire. L\'aigle à deux têtes sculpté dans la pierre est un véritable chef-d\'œuvre de l\'art de la Renaissance.' },
       ]
     },
     map: {
