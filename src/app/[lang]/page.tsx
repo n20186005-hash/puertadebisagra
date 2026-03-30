@@ -5,9 +5,41 @@ import { dictionaries } from "@/i18n/dictionaries";
 import ThemeToggle from "@/components/ThemeToggle";
 import LanguageToggle from "@/components/LanguageToggle";
 import Reviews from "@/components/Reviews";
+import { Metadata } from "next";
 
 const GOOGLE_MAPS_SHORT_LINK = "https://maps.app.goo.gl/EcXi7kGiSp2Ehgub8";
 const SUPPORT_EMAIL = "claritleonelmnicol@gmail.com";
+const BASE_URL = "https://www.puertadebisagra.com";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params;
+  const currentLang = lang || 'es';
+  const dict = dictionaries[currentLang as keyof typeof dictionaries] || dictionaries.es;
+
+  const languages = ['es', 'en', 'zh-Hant', 'fr'];
+  const alternates: Record<string, string> = {
+    'x-default': `${BASE_URL}/es`,
+  };
+
+  languages.forEach((l) => {
+    alternates[l] = `${BASE_URL}/${l}`;
+  });
+
+  return {
+    title: dict.hero.title,
+    description: dict.intro.text.substring(0, 160),
+    alternates: {
+      canonical: `${BASE_URL}/${currentLang}`,
+      languages: alternates,
+    },
+    openGraph: {
+      title: dict.hero.title,
+      description: dict.intro.text.substring(0, 160),
+      url: `${BASE_URL}/${currentLang}`,
+      locale: currentLang,
+    }
+  };
+}
 
 export default async function LocalizedHome({
   params,

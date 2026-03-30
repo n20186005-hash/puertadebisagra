@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
 
 type Lang = 'en' | 'zh-Hant' | 'fr' | 'es';
 
@@ -171,6 +172,41 @@ const langNames: Record<Lang, string> = {
 
 const BASE_URL = 'https://www.puertadebisagra.com';
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string; page: 'privacy-policy' | 'terms-of-service' | 'cookie-settings' }>;
+}): Promise<Metadata> {
+  const { lang, page } = await params;
+  const currentLang = (lang as Lang) || 'es';
+  const pageKey = page === 'privacy-policy' ? 'privacy' : page === 'terms-of-service' ? 'terms' : 'cookies';
+  const data = content[currentLang]?.[pageKey] || content.es[pageKey];
+
+  const currentPath = `/${currentLang}/${page}`;
+  const otherLangs: Lang[] = ['en', 'zh-Hant', 'fr', 'es'];
+
+  const alternates: Record<string, string> = {
+    'x-default': `${BASE_URL}/es/${page}`,
+  };
+
+  otherLangs.forEach((l) => {
+    alternates[l] = `${BASE_URL}/${l}/${page}`;
+  });
+
+  return {
+    title: `${data.title} | Puerta de Bisagra`,
+    alternates: {
+      canonical: `${BASE_URL}${currentPath}`,
+      languages: alternates,
+    },
+    openGraph: {
+      title: `${data.title} | Puerta de Bisagra`,
+      url: `${BASE_URL}${currentPath}`,
+      locale: currentLang,
+    }
+  };
+}
+
 export default async function LegalPage({
   params,
 }: {
@@ -186,13 +222,6 @@ export default async function LegalPage({
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <head>
-        <link rel="canonical" href={`${BASE_URL}${currentPath}`} />
-        {otherLangs.map((l) => (
-          <link key={l} rel="alternate" hrefLang={l} href={`${BASE_URL}/${l}/${page}`} />
-        ))}
-        <link rel="alternate" hrefLang="x-default" href={`${BASE_URL}/${currentPath}`} />
-      </head>
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
         <Link href={`/${lang}`} className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6 transition-colors">
           <span>←</span>
