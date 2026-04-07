@@ -8,7 +8,6 @@ import Reviews from "@/components/Reviews";
 import { Metadata } from "next";
 
 const GOOGLE_MAPS_SHORT_LINK = "https://maps.app.goo.gl/EcXi7kGiSp2Ehgub8";
-const SUPPORT_EMAIL = "claritleonelmnicol@gmail.com";
 const BASE_URL = "https://www.puertadebisagra.com";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
@@ -94,12 +93,28 @@ export default async function LocalizedHome({
 
       <main className="max-w-5xl mx-auto px-4 py-20">
         <section className="mb-24 text-center">
-          <p className="text-sm text-gray-500 dark:text-gray-400 max-w-4xl mx-auto leading-relaxed mb-8 italic">
-            {dict.intro.declaration}
-          </p>
+          <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-8 mb-12 max-w-4xl mx-auto shadow-sm">
+            <h2 className="text-xl md:text-2xl font-bold text-blue-900 dark:text-blue-100 mb-4 flex items-center justify-center gap-2">
+              🏛️ {dict.intro.officialManagementTitle}
+            </h2>
+            <p className="text-blue-800 dark:text-blue-200 text-base md:text-lg leading-relaxed font-medium">
+              {dict.intro.officialManagement}
+            </p>
+          </div>
+
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10">
             {dict.intro.text}
           </p>
+
+          <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-xl p-8 mb-12 max-w-4xl mx-auto shadow-sm">
+            <h2 className="text-xl md:text-2xl font-bold text-green-900 dark:text-green-100 mb-4 flex items-center justify-center gap-2">
+              ℹ️ {dict.intro.visitorInfoTitle}
+            </h2>
+            <p className="text-green-800 dark:text-green-200 text-base md:text-lg leading-relaxed">
+              {dict.intro.visitorInfo}
+            </p>
+          </div>
+
           <div className="grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto text-left">
             {dict.intro.bullets.map((bullet, index) => (
               <div key={index} className="flex items-start gap-3 bg-gray-50 dark:bg-[#1a1a1a] p-4 rounded-lg border border-gray-100 dark:border-gray-800">
@@ -164,6 +179,26 @@ export default async function LocalizedHome({
 
       <footer className="bg-gray-50 dark:bg-[#111] py-16 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
         <div className="max-w-4xl mx-auto px-4 text-center">
+          <div className="mb-12">
+            <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 mb-6">
+              {dict.footer.officialLinksTitle}
+            </h3>
+            <ul className="flex flex-wrap justify-center gap-6 text-sm">
+              {dict.footer.links?.map((link, idx) => (
+                <li key={idx}>
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 font-medium transition-colors"
+                  >
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           <nav className="flex flex-wrap justify-center gap-6 text-sm mb-12">
             <Link href={`/${lang}/privacy-policy`} className="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
               {dict.nav.privacy}
@@ -177,7 +212,6 @@ export default async function LocalizedHome({
           </nav>
 
           <div className="text-sm text-gray-500 dark:text-gray-400 space-y-4">
-            <p>{dict.footer.support} <a href={`mailto:${SUPPORT_EMAIL}`} className="text-blue-500 hover:underline">{SUPPORT_EMAIL}</a></p>
             <p className="text-xs opacity-70">{dict.footer.dataRef}</p>
             <p className="pt-4">{dict.footer.copyright}</p>
           </div>

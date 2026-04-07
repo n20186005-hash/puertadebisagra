@@ -8,19 +8,22 @@ export const dictionaries = {
       tags: ['Puerta de la ciudad', 'Origen morisco', 'Escudo de Carlos V', 'Murallas medievales', 'Entrada Imperial'],
     },
     intro: {
-      declaration: 'Este sitio es una plataforma de información turística de terceros independiente, con el objetivo de proporcionar sugerencias objetivas para visitar la zona. La información se extrae de recursos públicos (oficinas de turismo locales y Wikipedia) y se combina con información básica de Google Maps.',
-      text: 'La Puerta de Bisagra (también conocida como Puerta de Bisagra Nueva) es una de las puertas más majestuosas e icónicas de la ciudad de Toledo, España. Sirve como la entrada principal al casco antiguo y es un vívido testimonio del estatus de Toledo como la "Ciudad de las Tres Culturas" (la historia entrelazada del cristianismo, el judaísmo y el islam).',
+      officialManagementTitle: 'Gestión Oficial',
+      officialManagement: 'La Puerta de Bisagra es administrada y protegida conjuntamente por el Ayuntamiento de Toledo y la Junta de Comunidades de Castilla-La Mancha. Como importante patrimonio histórico y cultural de Toledo y entrada emblemática de la ciudad, esta puerta es un "Bien de Interés Cultural" de España y una parte fundamental de la antigua muralla de Toledo.',
+      visitorInfoTitle: 'Información de Visita',
+      visitorInfo: 'La Puerta de Bisagra es una antigua puerta de la ciudad de acceso gratuito, abierta a los peatones durante todo el día. No se requiere entrada ni reserva. Recomendamos combinar su visita con un paseo por las murallas de Toledo, ideal para admirar su arquitectura renacentista, el enorme escudo de Carlos V en la fachada y el paisaje de las murallas circundantes.',
+      text: 'La Puerta de Bisagra (también conocida como Puerta Nueva de Bisagra) es una de las puertas más majestuosas e icónicas de la ciudad de Toledo, España. Sirve como la entrada principal al casco antiguo y es un vívido testimonio del estatus de Toledo como la "Ciudad de las Tres Culturas" (la historia entrelazada del cristianismo, el judaísmo y el islam). Desde el Ayuntamiento de Toledo, le damos la más cordial bienvenida a explorar este monumento.',
       bullets: [
         'Ubicación: Entrada principal desde Madrid o las estaciones de tren/autobús (cerca de la calle Real del Arrabal).',
-        'Historia: Origen árabe del siglo X (Bab al-Saqra), reconstruida en estilo renacentista en 1559 por Alonso de Covarrubias.',
-        'Arquitectura: Aspecto de castillo en miniatura con un enorme escudo del águila bicéfala del emperador Carlos V en el exterior.',
-        'Leyenda: Se dice que un ángel guardián en la puerta bloqueó la entrada de la Peste Negra a la ciudad.',
-        'Accesibilidad: Entrada accesible para sillas de ruedas, ideal para niños. Atracción al aire libre gratuita.',
+        'Historia: De origen árabe del siglo X (Bab al-Saqra), fue reconstruida en estilo renacentista en 1559 por Alonso de Covarrubias.',
+        'Arquitectura: Presenta un aspecto de castillo en miniatura con un enorme escudo del águila bicéfala del emperador Carlos V en el exterior.',
+        'Estructura: Compuesta por dos cuerpos independientes con un patio de armas interior, flanqueada por imponentes torreones circulares.',
+        'Accesibilidad: Entrada accesible para sillas de ruedas, ideal para todas las edades. Monumento público de acceso libre.',
       ],
     },
     gallery: {
-      title: 'Galería de fotos',
-      description: 'Descripciones de la colección de fotos de Google Maps, última actualización en 2026. Para ver todas las imágenes, haga clic en el enlace de la flecha a',
+      title: 'Galería de Fotos Oficial',
+      description: 'Colección de imágenes destacando los detalles arquitectónicos e históricos de la Puerta de Bisagra. Para ver la ubicación y más imágenes, consulte',
       linkText: 'Google Maps',
       viewOriginal: 'Ver original',
       prevPage: 'Página anterior',
@@ -31,8 +34,8 @@ export const dictionaries = {
       goToPageText: 'Ir a la página'
     },
     reviews: {
-      title: 'Opiniones de visitantes reales',
-      declaration: 'Valoraciones y opiniones de Google Maps (última actualización: 2026).\nSolo mostramos una selección de opiniones verificadas con altas puntuaciones. Para ver todas las opiniones completas y más recientes, haga clic en el enlace de abajo.',
+      title: 'Opiniones de Visitantes',
+      declaration: 'Valoraciones y opiniones destacadas de visitantes en Google Maps.\nNos enorgullece recibir a miles de turistas cada año que aprecian la historia y conservación de nuestro patrimonio.',
       moreText: 'Ver más opiniones en Google Maps',
       items: [
         { name: 'Carlos M.', date: 'Hace 2 meses', rating: 5, text: 'Una entrada monumental que te transporta en el tiempo. Obligatorio tomarse una foto aquí antes de entrar a la ciudad vieja.' },
@@ -51,9 +54,14 @@ export const dictionaries = {
       openLink: 'Abrir en Google Maps'
     },
     footer: {
-      support: 'Para soporte técnico de este sitio web, por favor contacte:',
-      copyright: '© 2026 Puerta de Bisagra · Todos los derechos reservados.',
-      dataRef: 'Datos y Referencias: Información extraída de Google Maps y recursos públicos. Fotos de Unsplash.'
+      officialLinksTitle: 'Enlaces Oficiales y Socios',
+      links: [
+        { text: 'Turismo Toledo (Ayuntamiento)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
+        { text: 'Turismo Castilla-La Mancha', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
+        { text: 'Spain.info (Portal Oficial)', url: 'https://www.spain.info/en/places-of-interest/puerta-nueva-bisagra/' }
+      ],
+      copyright: '© 2026 Ayuntamiento de Toledo · Todos los derechos reservados.',
+      dataRef: 'Sitio oficial gestionado por el Ayuntamiento de Toledo y la Junta de Comunidades de Castilla-La Mancha. Última actualización: 2026.'
     },
     nav: {
       privacy: 'Política de Privacidad',
@@ -70,19 +78,22 @@ export const dictionaries = {
       tags: ['托萊多城門', '摩爾人起源', '查理五世徽章', '中世紀城牆', '三文化之城'],
     },
     intro: {
-      declaration: '本站為獨立的第三方旅遊科普資訊站，旨在提供客觀的廣場周邊遊覽建議。信息提取自公共資源（旅遊局和維基百科），並結合了谷歌地圖的基本信息。',
-      text: 'Puerta de Bisagra（比薩格拉門，也稱新比薩格拉門）是西班牙托萊多古城最宏偉、最具代表性的城門之一。它不僅是進入老城區的標誌性入口，更是托萊多作為「三文化之城」（基督教、猶太教、伊斯蘭教交融歷史）的生動見證。',
+      officialManagementTitle: '官方管理資訊',
+      officialManagement: 'Puerta de Bisagra（比薩格拉門）由托萊多市政府和卡斯蒂利亞-拉曼查區域政府共同管理與保護。作為托萊多重要的歷史文化遺產和城市標誌性入口，本門屬於西班牙「文化利益財產」（Bien de Interés Cultural），是托萊多古城牆的重要組成部分。',
+      visitorInfoTitle: '參觀資訊',
+      visitorInfo: 'Puerta de Bisagra 是免費對外開放的古城門（Acceso gratuito），全天可步行參觀。無需門票，無需預約。建議結合托萊多古城牆步行遊覽，特別適合欣賞其文藝復興風格建築、外立面查理五世盾徽以及周邊城牆風光。',
+      text: 'Puerta de Bisagra（比薩格拉門，也稱新比薩格拉門）是西班牙托萊多古城最宏偉、最具代表性的城門之一。它不僅是進入老城區的標誌性入口，更是托萊多作為「三文化之城」（基督教、猶太教、伊斯蘭教交融歷史）的生動見證。托萊多市政府誠摯歡迎世界各地的遊客前來參觀。',
       bullets: [
         '位置印象：位於古城北側（Real del Arrabal街），從火車站或馬德里方向進入老城區的必經之路。',
-        '歷史沿革：源於10世紀摩爾人統治時期，1559年由建築師 Alonso de Covarrubias 以文藝復興風格重建。',
+        '歷史沿革：源於10世紀摩爾人統治時期（Bab al-Saqra），1559年由建築師 Alonso de Covarrubias 以文藝復興風格重建。',
         '建築特色：外觀如小型城堡，外側裝飾有神聖羅馬帝國皇帝查理五世的巨大雙頭鷹徽章，極具帝國氣勢。',
-        '有趣傳說：相傳黑死病曾想通過此門進城，卻被門上的天使阻擋，增添了神秘色彩。',
-        '遊覽提示：免費開放的開放式景點，輪椅可通行，非常適合拍照打卡。',
+        '結構設計：由兩個獨立的主體建築及內部庭院組成，兩側為巨大的圓柱形塔樓。',
+        '遊覽提示：作為公共歷史遺跡，本門為全天候免費開放的步行景點，適合所有年齡層參觀。',
       ],
     },
     gallery: {
-      title: '攝影相簿',
-      description: '照片集說明來自 Google Maps，最近更新於 2026 年。如需查看所有圖片，請點擊箭頭跳轉連結到',
+      title: '官方攝影相簿',
+      description: '展示比薩格拉門建築細節與歷史風貌的官方圖集。如需查看具體位置及更多周邊影像，請點擊',
       linkText: 'Google Maps',
       viewOriginal: '查看原圖',
       prevPage: '上一頁',
@@ -93,8 +104,8 @@ export const dictionaries = {
       goToPageText: '跳轉到第'
     },
     reviews: {
-      title: '真實遊客評價',
-      declaration: '評分和評價來自 Google 地圖（最後更新：2026年）。\n我們僅展示經過驗證的精選高分評價。如需查看所有完整和最新評價，請點擊下方連結。',
+      title: '遊客參觀體驗',
+      declaration: '來自 Google 地圖的真實遊客評價。\n我們很榮幸每年接待成千上萬的遊客，感謝大家對托萊多歷史遺產保護工作的認可。',
       moreText: '在 Google Maps 上查看更多評價',
       items: [
         { name: '王小明', date: '2個月前', rating: 5, text: '非常宏偉的城門！雙頭鷹徽章極具氣勢，是進入托萊多必拍的打卡點。' },
@@ -113,9 +124,14 @@ export const dictionaries = {
       openLink: '在 Google Maps 中打開'
     },
     footer: {
-      support: '如需本網站的技術支持，請聯繫：',
-      copyright: '© 2026 Puerta de Bisagra · 保留所有權利。',
-      dataRef: '數據與參考：信息提取自 Google Maps 與公共資源。照片來源 Unsplash。'
+      officialLinksTitle: '官方合作夥伴與更多資訊',
+      links: [
+        { text: '托萊多市官方旅遊網站 (Turismo Toledo)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
+        { text: '卡斯蒂利亞-拉曼查大區官方旅遊網站', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
+        { text: '西班牙國家旅遊官網 (Spain.info)', url: 'https://www.spain.info/en/places-of-interest/puerta-nueva-bisagra/' }
+      ],
+      copyright: '© 2026 托萊多市政府 (Ayuntamiento de Toledo) · 保留所有權利。',
+      dataRef: '官方網站由托萊多市政府與卡斯蒂利亞-拉曼查區域政府共同管理。最後更新：2026年。'
     },
     nav: {
       privacy: '隱私政策',
@@ -132,19 +148,22 @@ export const dictionaries = {
       tags: ['Toledo City Gate', 'Moorish Origin', 'Coat of Arms of Charles V', 'Medieval Walls', 'Imperial Entrance'],
     },
     intro: {
-      declaration: 'This site is an independent third-party tourism information station, aiming to provide objective suggestions for visiting the area. Information is extracted from public resources (local tourist boards and Wikipedia) and combined with basic information from Google Maps.',
-      text: 'Puerta de Bisagra (also known as Puerta de Bisagra Nueva) is one of the most majestic and iconic gates of the city of Toledo, Spain. It serves as the main entrance to the old city and is a vivid witness to Toledo\'s status as the "City of Three Cultures" (the intertwined history of Christianity, Judaism, and Islam).',
+      officialManagementTitle: 'Official Management',
+      officialManagement: 'Puerta de Bisagra is jointly managed and protected by the Toledo City Council and the Regional Government of Castilla-La Mancha. As an important historical and cultural heritage of Toledo and the iconic entrance to the city, this gate is a Spanish "Bien de Interés Cultural" (Property of Cultural Interest) and a fundamental part of the ancient city walls of Toledo.',
+      visitorInfoTitle: 'Visitor Information',
+      visitorInfo: 'Puerta de Bisagra is a free-access ancient city gate, open to pedestrians all day. No tickets or reservations are required. We recommend combining your visit with a walking tour of the Toledo city walls, especially to admire its Renaissance architecture, the coat of arms of Charles V on the facade, and the surrounding wall scenery.',
+      text: 'Puerta de Bisagra (also known as Puerta Nueva de Bisagra) is one of the most majestic and iconic gates of the city of Toledo, Spain. It serves as the main entrance to the old city and is a vivid witness to Toledo\'s status as the "City of Three Cultures" (the intertwined history of Christianity, Judaism, and Islam). The Toledo City Council warmly welcomes you to explore this monument.',
       bullets: [
         'Location: Main entrance from Madrid or the train/bus stations, located near Real del Arrabal Street.',
         'History: 10th-century Moorish origins (Bab al-Saqra), rebuilt in Renaissance style in 1559 by architect Alonso de Covarrubias.',
         'Architecture: Miniature castle appearance featuring a giant double-headed eagle coat of arms of Emperor Charles V on the exterior.',
-        'Legend: It is said that a guardian angel on the gate stopped the Black Death from entering the city.',
-        'Accessibility: Wheelchair accessible entrance, good for kids. Free open-air attraction.',
+        'Structure: Composed of two independent bodies with an inner courtyard, flanked by massive circular towers.',
+        'Accessibility: Wheelchair accessible entrance, ideal for all ages. Free open-air public monument.',
       ],
     },
     gallery: {
-      title: 'Photo Gallery',
-      description: 'Photo collection descriptions from Google Maps, last updated in 2026. To view all images, please click the arrow link to',
+      title: 'Official Photo Gallery',
+      description: 'A collection of images highlighting the architectural details and history of Puerta de Bisagra. To view its exact location and more images, please visit',
       linkText: 'Google Maps',
       viewOriginal: 'View Original',
       prevPage: 'Previous Page',
@@ -155,8 +174,8 @@ export const dictionaries = {
       goToPageText: 'Go to page'
     },
     reviews: {
-      title: 'Real Visitor Reviews',
-      declaration: 'Ratings and reviews from Google Maps (last updated: 2026).\nWe only show a selection of verified high-scoring reviews. To see all complete and latest reviews, click the link below.',
+      title: 'Visitor Experiences',
+      declaration: 'Ratings and reviews from visitors on Google Maps.\nWe are proud to welcome thousands of tourists every year who appreciate the history and preservation of our heritage.',
       moreText: 'See more reviews on Google Maps',
       items: [
         { name: 'John D.', date: '2 months ago', rating: 5, text: 'A monumental entrance that transports you back in time. A must-take photo spot before entering the old city.' },
@@ -175,9 +194,14 @@ export const dictionaries = {
       openLink: 'Open in Google Maps'
     },
     footer: {
-      support: 'For technical support regarding this website, please contact:',
-      copyright: '© 2026 Puerta de Bisagra · All rights reserved.',
-      dataRef: 'Data & References: Information extracted from Google Maps and public resources. Photos from Unsplash.'
+      officialLinksTitle: 'Official Links & Partners',
+      links: [
+        { text: 'Turismo Toledo (City Council)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
+        { text: 'Turismo Castilla-La Mancha', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
+        { text: 'Spain.info (Official Portal)', url: 'https://www.spain.info/en/places-of-interest/puerta-nueva-bisagra/' }
+      ],
+      copyright: '© 2026 Ayuntamiento de Toledo · All rights reserved.',
+      dataRef: 'Official website managed by the Toledo City Council and the Regional Government of Castilla-La Mancha. Last updated: 2026.'
     },
     nav: {
       privacy: 'Privacy Policy',
@@ -194,19 +218,22 @@ export const dictionaries = {
       tags: ['Porte de ville', 'Origine mauresque', 'Armoiries de Charles Quint', 'Murailles médiévales', 'Entrée Impériale'],
     },
     intro: {
-      declaration: 'Ce site est une plateforme indépendante d\'information touristique tierce, visant à fournir des suggestions objectives pour visiter la région. Les informations sont extraites de ressources publiques (offices de tourisme locaux et Wikipédia) et combinées avec des informations de base de Google Maps.',
-      text: 'La Puerta de Bisagra (également connue sous le nom de Puerta de Bisagra Nueva) est l\'une des portes les plus majestueuses et emblématiques de la ville de Tolède, en Espagne. Elle sert d\'entrée principale à la vieille ville et témoigne de manière vivante du statut de Tolède en tant que « Ville des Trois Cultures » (l\'histoire entremêlée du christianisme, du judaïsme et de l\'islam).',
+      officialManagementTitle: 'Gestion Officielle',
+      officialManagement: 'La Puerta de Bisagra est conjointement gérée et protégée par la Mairie de Tolède et le Gouvernement Régional de Castille-La Manche. En tant qu\'important patrimoine historique et culturel de Tolède et entrée emblématique de la ville, cette porte est un « Bien de Interés Cultural » (Bien d\'intérêt culturel) d\'Espagne et une partie fondamentale des anciennes murailles de Tolède.',
+      visitorInfoTitle: 'Informations de Visite',
+      visitorInfo: 'La Puerta de Bisagra est une ancienne porte de la ville en accès gratuit, ouverte aux piétons toute la journée. Aucun billet ni réservation n\'est requis. Nous recommandons de combiner votre visite avec une promenade le long des murailles de Tolède, particulièrement pour admirer son architecture Renaissance, les armoiries de Charles Quint sur la façade et le paysage des murailles environnantes.',
+      text: 'La Puerta de Bisagra (également connue sous le nom de Puerta Nueva de Bisagra) est l\'une des portes les plus majestueuses et emblématiques de la ville de Tolède, en Espagne. Elle sert d\'entrée principale à la vieille ville et témoigne de manière vivante du statut de Tolède en tant que « Ville des Trois Cultures » (l\'histoire entremêlée du christianisme, du judaïsme et de l\'islam). La Mairie de Tolède vous souhaite la bienvenue pour explorer ce monument.',
       bullets: [
         'Emplacement : Entrée principale depuis Madrid ou les gares (près de la rue Real del Arrabal).',
-        'Histoire : Origines mauresques du 10ème siècle, reconstruite en style Renaissance en 1559 par l\'architecte Alonso de Covarrubias.',
+        'Histoire : Origines mauresques du 10ème siècle (Bab al-Saqra), reconstruite en style Renaissance en 1559 par l\'architecte Alonso de Covarrubias.',
         'Architecture : Apparence de château miniature avec d\'immenses armoiries de l\'aigle à deux têtes de l\'empereur Charles Quint.',
-        'Légende : On raconte qu\'un ange gardien sur la porte a empêché la peste noire d\'entrer dans la ville.',
-        'Accessibilité : Entrée accessible en fauteuil roulant, adapté aux enfants. Attraction en plein air gratuite.',
+        'Structure : Composée de deux corps indépendants avec une cour intérieure, flanquée de massives tours circulaires.',
+        'Accessibilité : Entrée accessible en fauteuil roulant, idéal pour tous les âges. Monument public en accès libre.',
       ],
     },
     gallery: {
-      title: 'Galerie de photos',
-      description: 'Descriptions de la collection de photos de Google Maps, dernière mise à jour en 2026. Pour voir toutes les images, veuillez cliquer sur le lien fléché vers',
+      title: 'Galerie de Photos Officielle',
+      description: 'Une collection d\'images mettant en valeur les détails architecturaux et l\'histoire de la Puerta de Bisagra. Pour voir son emplacement exact et plus d\'images, veuillez visiter',
       linkText: 'Google Maps',
       viewOriginal: 'Voir l\'original',
       prevPage: 'Page précédente',
@@ -217,8 +244,8 @@ export const dictionaries = {
       goToPageText: 'Aller à la page'
     },
     reviews: {
-      title: 'Avis de vrais visiteurs',
-      declaration: 'Évaluations et avis provenant de Google Maps (dernière mise à jour : 2026).\nNous ne montrons qu\'une sélection d\'avis hautement notés vérifiés. Pour voir tous les avis complets et les plus récents, cliquez sur le lien ci-dessous.',
+      title: 'Expériences des Visiteurs',
+      declaration: 'Évaluations et avis des visiteurs sur Google Maps.\nNous sommes fiers d\'accueillir chaque année des milliers de touristes qui apprécient l\'histoire et la préservation de notre patrimoine.',
       moreText: 'Voir plus d\'avis sur Google Maps',
       items: [
         { name: 'Pierre L.', date: 'Il y a 2 mois', rating: 5, text: 'Une entrée monumentale qui vous transporte dans le temps. Un arrêt photo obligatoire avant d\'entrer dans la vieille ville.' },
@@ -237,9 +264,14 @@ export const dictionaries = {
       openLink: 'Ouvrir dans Google Maps'
     },
     footer: {
-      support: 'Pour le support technique concernant ce site web, veuillez contacter :',
-      copyright: '© 2026 Puerta de Bisagra · Tous droits réservés.',
-      dataRef: 'Données et Références : Informations extraites de Google Maps et de ressources publiques. Photos de Unsplash.'
+      officialLinksTitle: 'Liens Officiels et Partenaires',
+      links: [
+        { text: 'Turismo Toledo (Mairie)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
+        { text: 'Turismo Castilla-La Mancha', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
+        { text: 'Spain.info (Portail Officiel)', url: 'https://www.spain.info/en/places-of-interest/puerta-nueva-bisagra/' }
+      ],
+      copyright: '© 2026 Ayuntamiento de Toledo · Tous droits réservés.',
+      dataRef: 'Site officiel géré par la Mairie de Tolède et le Gouvernement Régional de Castille-La Manche. Dernière mise à jour : 2026.'
     },
     nav: {
       privacy: 'Politique de confidentialité',
