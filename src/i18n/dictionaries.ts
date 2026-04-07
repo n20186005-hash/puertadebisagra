@@ -54,7 +54,7 @@ export const dictionaries = {
       openLink: 'Abrir en Google Maps'
     },
     footer: {
-      officialLinksTitle: 'Enlaces Oficiales y Socios',
+      officialLinksTitle: 'Enlaces Oficiales y Recursos',
       links: [
         { text: 'Turismo Toledo (Ayuntamiento)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
         { text: 'Turismo Castilla-La Mancha', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
@@ -124,7 +124,7 @@ export const dictionaries = {
       openLink: '在 Google Maps 中打開'
     },
     footer: {
-      officialLinksTitle: '官方合作夥伴與更多資訊',
+      officialLinksTitle: '官方資源與連結',
       links: [
         { text: '托萊多市官方旅遊網站 (Turismo Toledo)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
         { text: '卡斯蒂利亞-拉曼查大區官方旅遊網站', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
@@ -194,7 +194,7 @@ export const dictionaries = {
       openLink: 'Open in Google Maps'
     },
     footer: {
-      officialLinksTitle: 'Official Links & Partners',
+      officialLinksTitle: 'Official Resources & Links',
       links: [
         { text: 'Turismo Toledo (City Council)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
         { text: 'Turismo Castilla-La Mancha', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
@@ -264,7 +264,7 @@ export const dictionaries = {
       openLink: 'Ouvrir dans Google Maps'
     },
     footer: {
-      officialLinksTitle: 'Liens Officiels et Partenaires',
+      officialLinksTitle: 'Liens et Ressources Officiels',
       links: [
         { text: 'Turismo Toledo (Mairie)', url: 'https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html' },
         { text: 'Turismo Castilla-La Mancha', url: 'https://www.turismocastillalamancha.es/es/cultura-y-patrimonio/monumentos/toledo/puerta-de-bisagra-(toledo)' },
