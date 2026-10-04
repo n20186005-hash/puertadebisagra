@@ -11,6 +11,26 @@ const nextConfig = {
         destination: '/es',
         permanent: true,
       },
+      {
+        source: '/es/undefined',
+        destination: '/es/cookie-settings',
+        permanent: true,
+      },
+      {
+        source: '/en/undefined',
+        destination: '/en/cookie-settings',
+        permanent: true,
+      },
+      {
+        source: '/fr/undefined',
+        destination: '/fr/cookie-settings',
+        permanent: true,
+      },
+      {
+        source: '/zh-Hant/undefined',
+        destination: '/zh-Hant/cookie-settings',
+        permanent: true,
+      },
     ];
   },
 };

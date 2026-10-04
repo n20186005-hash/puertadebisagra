@@ -14,13 +14,13 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Puerta de Bisagra",
-  description: "Puerta de Bisagra（比萨格拉门/新比萨格拉门）是西班牙托莱多古城最宏伟、最具标志性的城门。了解其摩尔人起源、文艺复兴重建历史、查理五世徽章及三文化之城象征意义。",
-  keywords: ["Puerta de Bisagra", "比萨格拉门", "托莱多城门", "Toledo City Gate", "摩尔人起源", "Moorish Origin", "查理五世徽章", "中世纪城墙", "三文化之城", "Alonso de Covarrubias"],
+  title: "Puerta de Bisagra Toledo",
+  description: "Independent travel guide to Puerta de Bisagra in Toledo, with history, visitor information, directions and official reference links.",
+  keywords: ["Puerta de Bisagra", "Puerta Nueva de Bisagra", "Puerta de Bisagra Toledo", "Toledo city gate", "Alonso de Covarrubias", "比萨格拉门"],
   authors: [{ name: "Puerta de Bisagra" }],
   openGraph: {
-    title: "Puerta de Bisagra",
-    description: "西班牙托莱多古城最宏伟的城门 - 三文化之城象征",
+    title: "Puerta de Bisagra Toledo",
+    description: "Independent travel guide to one of Toledo's most iconic monumental gates.",
     url: "https://www.puertadebisagra.com/",
     siteName: "Puerta de Bisagra",
     locale: "es",

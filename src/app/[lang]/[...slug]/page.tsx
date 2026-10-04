@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 type Lang = 'en' | 'zh-Hant' | 'fr' | 'es';
 
@@ -16,37 +17,37 @@ const content: Record<Lang, Record<string, {
 }>> = {
   en: {
     privacy: {
-      title: 'Official Privacy Policy',
+      title: 'Privacy Policy',
       lastUpdate: 'Last updated: March 2026',
-      intro: 'This website is managed by the Toledo City Council and the Regional Government of Castilla-La Mancha. As a public service platform, we are committed to protecting your privacy in compliance with the GDPR and Spanish data protection regulations.',
+      intro: 'puertadebisagra.com is an independent travel guide about Puerta de Bisagra in Toledo. This page explains how we handle basic technical information and external services such as Google Maps.',
       sections: [
-        { heading: '1. Information Collection', text: 'This official website serves as a public information platform and does not actively collect personally identifiable information from users. Any data collected through server logs is used strictly for technical maintenance and improving public services.' },
-        { heading: '2. Use of Cookies', text: 'We use necessary cookies to ensure the proper functioning of this public service platform. You can adjust your preferences in the Cookie Settings.' },
-        { heading: '3. Third-Party Services (Google Maps)', text: 'To facilitate your visit, this site provides links to Google Maps. When you click these links or interact with embedded maps, Google may process your data in accordance with their own privacy policies. We provide these features solely as a public service for location guidance.' },
-        { heading: '4. Contact', text: 'For inquiries regarding this official website or data protection, please contact the Toledo City Council tourist information office.' },
+        { heading: '1. Information Collection', text: 'We do not actively request personal information from visitors through this website. Standard server logs may collect limited technical data needed for security, diagnostics and performance monitoring.' },
+        { heading: '2. Use of Cookies', text: 'Necessary cookies may be used to keep the site working properly. You can review the cookie categories described on the Cookie Settings page.' },
+        { heading: '3. Third-Party Services (Google Maps)', text: 'This site links to Google Maps and may embed mapping content to help visitors plan routes. Those services are governed by Google\'s own terms and privacy policies.' },
+        { heading: '4. Contact', text: 'If you have questions about this independent guide, please use the public official tourism sources linked from the site for institutional enquiries about the monument itself.' },
       ],
       backHome: 'Back to Home',
     },
     terms: {
-      title: 'Official Terms of Service',
+      title: 'Terms of Service',
       lastUpdate: 'Last updated: March 2026',
-      intro: 'This website is managed by the Toledo City Council and the Regional Government of Castilla-La Mancha.',
+      intro: 'These terms apply to the use of puertadebisagra.com as an independent travel guide.',
       sections: [
-        { heading: '1. Acceptance of Terms', text: 'By accessing this official public service website, you agree to these terms, which govern the use of information provided by the municipal and regional governments.' },
-        { heading: '2. Use of Content', text: 'The information provided on this website is for public service purposes. The Toledo City Council ensures the accuracy of historical and visitor information to the best of its ability.' },
-        { heading: '3. Intellectual Property', text: 'All content on this site, unless otherwise indicated, is the property of the Toledo City Council and protected by copyright laws. Unauthorized commercial use of this public resource is prohibited.' },
-        { heading: '4. External Links Disclaimer', text: 'This website contains links to external services (such as Google Maps) to assist visitors. The Toledo City Council is not responsible for the content, terms, or privacy practices of these external platforms.' },
+        { heading: '1. Acceptance of Terms', text: 'By using this site, you agree to use the information as general travel guidance only.' },
+        { heading: '2. Informational Use', text: 'We aim to keep historical and visitor information useful and up to date, but conditions can change. Please confirm critical details such as transport, access or public notices with official sources.' },
+        { heading: '3. Intellectual Property', text: 'Unless otherwise noted, the original text and design of this website may not be reproduced for commercial purposes without permission.' },
+        { heading: '4. External Links Disclaimer', text: 'Links to Google Maps, tourism portals and institutional websites are provided for convenience. We are not responsible for their content, terms or availability.' },
       ],
       backHome: 'Back to Home',
     },
     cookies: {
-      title: 'Official Cookie Settings',
+      title: 'Cookie Settings',
       lastUpdate: 'Last updated: March 2026',
-      intro: 'This website is managed by the Toledo City Council and the Regional Government of Castilla-La Mancha.',
-      description: 'We use cookies to ensure the secure and efficient operation of this public service website. This includes necessary cookies and third-party cookies related to integrated services (such as Google Maps).',
+      intro: 'This page describes the cookie categories used by this independent travel guide.',
+      description: 'We use essential cookies to keep the site functioning and may rely on third-party services such as Google Maps for route planning and location features.',
       categories: [
-        { id: 'necessary', title: 'Strictly Necessary Cookies', description: 'Essential for the basic functioning of this official website. They cannot be disabled in our systems.', required: true },
-        { id: 'analytics', title: 'Analytics Cookies', description: 'Used anonymously to measure public interest and improve our civic services.', required: false },
+        { id: 'necessary', title: 'Strictly Necessary Cookies', description: 'Required for the core functionality of the website.', required: true },
+        { id: 'analytics', title: 'Analytics Cookies', description: 'May be used to understand site usage and improve the visitor experience.', required: false },
         { id: 'third-party', title: 'Third-Party Services (Google)', description: 'Cookies set by external services like Google Maps when you interact with location features.', required: false },
       ],
       backHome: 'Back to Home',
@@ -56,37 +57,37 @@ const content: Record<Lang, Record<string, {
   },
   'zh-Hant': {
     privacy: {
-      title: '官方隱私政策 (Privacy Policy)',
+      title: '隱私政策 (Privacy Policy)',
       lastUpdate: '最後更新：2026 年 3 月',
-      intro: '本網站由托萊多市政府和卡斯蒂利亞-拉曼查區域政府管理。作為公共服務平台，我們承諾遵守 GDPR 及西班牙資料保護法規，保護您的隱私。',
+      intro: 'puertadebisagra.com 是介紹托萊多 Puerta de Bisagra 的獨立旅遊資訊網站。本頁說明網站如何處理基本技術資訊，以及與 Google Maps 等外部服務的關係。',
       sections: [
-        { heading: '1. 資訊收集', text: '本官方網站作為公共資訊平台，不會主動收集使用者的個人識別資訊。透過伺服器日誌收集的任何資料僅用於技術維護和改善公共服務。' },
-        { heading: '2. Cookie 的使用', text: '我們使用必要的 Cookie 來確保此公共服務平台的正常運作。您可以在 Cookie 設定中調整您的偏好。' },
-        { heading: '3. 第三方服務（Google Maps）', text: '為方便您的參觀，本網站提供 Google Maps 連結。當您點擊這些連結或與嵌入式地圖互動時，Google 可能會根據其隱私政策處理您的資料。我們僅作為位置指引的公共服務提供這些功能。' },
-        { heading: '4. 聯絡方式', text: '如對本官方網站或資料保護有任何疑問，請聯絡托萊多市政府旅遊資訊處。' },
+        { heading: '1. 資訊收集', text: '本網站不主動要求訪客提供個人身份資料。伺服器可能保留少量技術日誌，用於安全、診斷與效能維護。' },
+        { heading: '2. Cookie 的使用', text: '網站可能使用必要 Cookie 以維持基本功能。Cookie 類別可在 Cookie 設定頁查看。' },
+        { heading: '3. 第三方服務（Google Maps）', text: '為了協助規劃路線，本站會連向 Google Maps 或嵌入地圖內容。相關資料處理將受 Google 自身條款與隱私政策規範。' },
+        { heading: '4. 聯絡方式', text: '若是與景點官方資訊、交通公告或機構業務有關的問題，請以本站列出的官方旅遊來源為準。' },
       ],
       backHome: '返回首頁',
     },
     terms: {
-      title: '官方服務條款 (Terms of Service)',
+      title: '服務條款 (Terms of Service)',
       lastUpdate: '最後更新：2026 年 3 月',
-      intro: '本網站由托萊多市政府和卡斯蒂利亞-拉曼查區域政府管理。',
+      intro: '以下條款適用於作為獨立旅遊指南的 puertadebisagra.com。',
       sections: [
-        { heading: '1. 條款接受', text: '存取本官方公共服務網站即表示您同意這些條款，這些條款規範了市政府和區域政府提供的資訊的使用。' },
-        { heading: '2. 內容使用', text: '本網站提供的資訊旨在提供公共服務。托萊多市政府盡最大努力確保歷史和參觀資訊的準確性。' },
-        { heading: '3. 智慧財產權', text: '除非另有說明，本網站上的所有內容均為托萊多市政府的財產，並受版權法保護。禁止未經授權將此公共資源用於商業用途。' },
-        { heading: '4. 外部連結免責聲明', text: '本網站包含指向外部服務（如 Google Maps）的連結以協助遊客。托萊多市政府對這些外部平台的內容、條款或隱私慣例不承擔責任。' },
+        { heading: '1. 條款接受', text: '使用本網站，即表示您理解本站內容僅作一般旅遊參考。' },
+        { heading: '2. 內容使用', text: '我們會盡力維持資訊實用與更新，但交通、開放狀況與公共公告可能隨時變動，重要資訊請再向官方來源確認。' },
+        { heading: '3. 智慧財產權', text: '除非另有說明，本站原創文字與設計不得未經授權作商業性重製。' },
+        { heading: '4. 外部連結免責聲明', text: 'Google Maps、旅遊局或政府網站連結僅供延伸查閱，我們不對外部網站內容與可用性負責。' },
       ],
       backHome: '返回首頁',
     },
     cookies: {
-      title: '官方 Cookie 設定 (Cookie Settings)',
+      title: 'Cookie 設定 (Cookie Settings)',
       lastUpdate: '最後更新：2026 年 3 月',
-      intro: '本網站由托萊多市政府和卡斯蒂利亞-拉曼查區域政府管理。',
-      description: '我們使用 Cookie 來確保此公共服務網站的安全高效運作。這包括必要的 Cookie 以及與整合服務（如 Google Maps）相關的第三方 Cookie。',
+      intro: '本頁說明這個獨立旅遊網站可能使用的 Cookie 類別。',
+      description: '我們會使用必要 Cookie 維持網站正常運作，也可能透過 Google Maps 等第三方服務提供位置與路線功能。',
       categories: [
-        { id: 'necessary', title: '嚴格必要的 Cookie', description: '本官方網站基本運作所必需。無法在我們的系統中停用。', required: true },
-        { id: 'analytics', title: '分析 Cookie', description: '以匿名方式使用，用於衡量公眾興趣並改善我們的市政服務。', required: false },
+        { id: 'necessary', title: '嚴格必要的 Cookie', description: '維持網站基本功能所必需。', required: true },
+        { id: 'analytics', title: '分析 Cookie', description: '可用於了解網站使用情況並改善旅客體驗。', required: false },
         { id: 'third-party', title: '第三方服務 (Google)', description: '當您與位置功能互動時，由 Google Maps 等外部服務設定的 Cookie。', required: false },
       ],
       backHome: '返回首頁',
@@ -96,37 +97,37 @@ const content: Record<Lang, Record<string, {
   },
   fr: {
     privacy: {
-      title: 'Politique de Confidentialité Officielle',
+      title: 'Politique de confidentialité',
       lastUpdate: 'Dernière mise à jour : Mars 2026',
-      intro: 'Ce site web est géré par la Mairie de Tolède et le Gouvernement Régional de Castille-La Manche. En tant que plateforme de service public, nous nous engageons à protéger votre vie privée conformément au RGPD et aux réglementations espagnoles sur la protection des données.',
+      intro: 'puertadebisagra.com est un guide de voyage indépendant consacré à la Puerta de Bisagra à Tolède. Cette page explique le traitement des informations techniques de base et l\'usage de services externes comme Google Maps.',
       sections: [
-        { heading: '1. Collecte d\'informations', text: 'Ce site officiel sert de plateforme d\'information publique et ne collecte pas activement d\'informations d\'identification personnelle. Les données collectées via les journaux de serveur sont strictement utilisées pour la maintenance technique et l\'amélioration des services publics.' },
-        { heading: '2. Utilisation des cookies', text: 'Nous utilisons les cookies nécessaires pour assurer le bon fonctionnement de cette plateforme de service public. Vous pouvez ajuster vos préférences dans les Paramètres des cookies.' },
-        { heading: '3. Services Tiers (Google Maps)', text: 'Pour faciliter votre visite, ce site fournit des liens vers Google Maps. Lorsque vous cliquez sur ces liens ou interagissez avec des cartes intégrées, Google peut traiter vos données conformément à ses propres politiques de confidentialité. Nous fournissons ces fonctionnalités uniquement en tant que service public pour l\'orientation.' },
-        { heading: '4. Contact', text: 'Pour toute question concernant ce site officiel ou la protection des données, veuillez contacter l\'office de tourisme de la Mairie de Tolède.' },
+        { heading: '1. Collecte d\'informations', text: 'Le site ne demande pas activement de données personnelles. Des journaux techniques limités peuvent être conservés à des fins de sécurité, de diagnostic et de performance.' },
+        { heading: '2. Utilisation des cookies', text: 'Des cookies nécessaires peuvent être utilisés pour assurer le bon fonctionnement du site. Les catégories sont décrites dans les paramètres des cookies.' },
+        { heading: '3. Services tiers (Google Maps)', text: 'Le site peut renvoyer vers Google Maps ou intégrer des cartes pour aider à préparer la visite. Ces services relèvent des conditions et politiques de Google.' },
+        { heading: '4. Contact', text: 'Pour les demandes institutionnelles concernant le monument, veuillez consulter les sources touristiques officielles liées depuis le site.' },
       ],
       backHome: 'Retour à l\'accueil',
     },
     terms: {
-      title: 'Conditions d\'Utilisation Officielles',
+      title: 'Conditions d\'utilisation',
       lastUpdate: 'Dernière mise à jour : Mars 2026',
-      intro: 'Ce site web est géré par la Mairie de Tolède et le Gouvernement Régional de Castille-La Manche.',
+      intro: 'Ces conditions s\'appliquent à l\'utilisation de puertadebisagra.com en tant que guide touristique indépendant.',
       sections: [
-        { heading: '1. Acceptation des conditions', text: 'En accédant à ce site de service public, vous acceptez ces conditions qui régissent l\'utilisation des informations fournies par les gouvernements municipal et régional.' },
-        { heading: '2. Utilisation du contenu', text: 'Les informations fournies sur ce site sont à des fins de service public. La Mairie de Tolède s\'efforce de garantir l\'exactitude des informations historiques et touristiques.' },
-        { heading: '3. Propriété intellectuelle', text: 'Sauf indication contraire, tout le contenu de ce site est la propriété de la Mairie de Tolède et est protégé par les lois sur le droit d\'auteur. L\'utilisation commerciale non autorisée de cette ressource publique est interdite.' },
-        { heading: '4. Clause de non-responsabilité des liens externes', text: 'Ce site contient des liens vers des services externes (tels que Google Maps) pour aider les visiteurs. La Mairie de Tolède n\'est pas responsable du contenu, des conditions ou des pratiques de confidentialité de ces plateformes externes.' },
+        { heading: '1. Acceptation des conditions', text: 'En utilisant ce site, vous acceptez d\'utiliser son contenu comme information générale de voyage.' },
+        { heading: '2. Utilisation du contenu', text: 'Nous faisons de notre mieux pour maintenir des informations utiles et à jour, mais les horaires, accès et conditions de visite peuvent évoluer. Vérifiez les éléments essentiels auprès des sources officielles.' },
+        { heading: '3. Propriété intellectuelle', text: 'Sauf mention contraire, les textes originaux et la conception du site ne peuvent pas être reproduits à des fins commerciales sans autorisation.' },
+        { heading: '4. Clause sur les liens externes', text: 'Les liens vers Google Maps, les portails touristiques ou les sites institutionnels sont fournis à titre pratique. Nous ne contrôlons pas leur contenu ni leur disponibilité.' },
       ],
       backHome: 'Retour à l\'accueil',
     },
     cookies: {
-      title: 'Paramètres des Cookies Officiels',
+      title: 'Paramètres des cookies',
       lastUpdate: 'Dernière mise à jour : Mars 2026',
-      intro: 'Ce site web est géré par la Mairie de Tolède et le Gouvernement Régional de Castille-La Manche.',
-      description: 'Nous utilisons des cookies pour assurer le fonctionnement sécurisé et efficace de ce site de service public. Cela inclut les cookies nécessaires et les cookies tiers liés aux services intégrés (tels que Google Maps).',
+      intro: 'Cette page décrit les catégories de cookies pouvant être utilisées sur ce guide touristique indépendant.',
+      description: 'Des cookies essentiels peuvent être utilisés pour le fonctionnement du site, ainsi que des services tiers comme Google Maps pour les fonctions de localisation.',
       categories: [
-        { id: 'necessary', title: 'Cookies strictement nécessaires', description: 'Essentiels pour le fonctionnement de base de ce site officiel. Ne peuvent pas être désactivés dans nos systèmes.', required: true },
-        { id: 'analytics', title: 'Cookies d\'analyse', description: 'Utilisés de manière anonyme pour mesurer l\'intérêt du public et améliorer nos services municipaux.', required: false },
+        { id: 'necessary', title: 'Cookies strictement nécessaires', description: 'Indispensables au fonctionnement de base du site.', required: true },
+        { id: 'analytics', title: 'Cookies d\'analyse', description: 'Peuvent être utilisés pour comprendre l\'usage du site et améliorer l\'expérience des visiteurs.', required: false },
         { id: 'third-party', title: 'Services Tiers (Google)', description: 'Cookies définis par des services externes comme Google Maps lorsque vous interagissez avec les fonctionnalités de localisation.', required: false },
       ],
       backHome: 'Retour à l\'accueil',
@@ -136,37 +137,37 @@ const content: Record<Lang, Record<string, {
   },
   es: {
     privacy: {
-      title: 'Política de Privacidad Oficial',
+      title: 'Política de Privacidad',
       lastUpdate: 'Última actualización: Marzo 2026',
-      intro: 'Este sitio web está gestionado por el Ayuntamiento de Toledo y la Junta de Comunidades de Castilla-La Mancha. Como plataforma de servicio público, nos comprometemos a proteger su privacidad de acuerdo con el RGPD y las normativas españolas de protección de datos.',
+      intro: 'puertadebisagra.com es una guía turística independiente sobre la Puerta de Bisagra en Toledo. Aquí explicamos cómo tratamos la información técnica básica del sitio y el uso de servicios externos como Google Maps.',
       sections: [
-        { heading: '1. Recopilación de información', text: 'Este sitio web oficial sirve como plataforma de información pública y no recopila activamente información de identificación personal de los usuarios. Los datos recopilados a través de registros de servidor se utilizan estrictamente para mantenimiento técnico y mejora de los servicios públicos.' },
-        { heading: '2. Uso de cookies', text: 'Utilizamos cookies necesarias para garantizar el funcionamiento adecuado de esta plataforma de servicio público. Puede ajustar sus preferencias en la Configuración de Cookies.' },
-        { heading: '3. Servicios de Terceros (Google Maps)', text: 'Para facilitar su visita, este sitio proporciona enlaces a Google Maps. Al hacer clic en estos enlaces o interactuar con mapas integrados, Google puede procesar sus datos de acuerdo con sus propias políticas de privacidad. Proporcionamos estas funciones únicamente como un servicio público de orientación.' },
-        { heading: '4. Contacto', text: 'Para consultas sobre este sitio web oficial o protección de datos, comuníquese con la oficina de información turística del Ayuntamiento de Toledo.' },
+        { heading: '1. Recopilación de información', text: 'No solicitamos activamente datos personales a través de este sitio. El servidor puede registrar datos técnicos mínimos para seguridad, diagnóstico y rendimiento.' },
+        { heading: '2. Uso de cookies', text: 'Podemos usar cookies necesarias para el funcionamiento básico del sitio. Las categorías descritas en la Configuración de Cookies ayudan a entender su finalidad.' },
+        { heading: '3. Servicios de terceros (Google Maps)', text: 'Este sitio enlaza a Google Maps y puede mostrar mapas incrustados para facilitar rutas y orientación. El tratamiento de datos relacionado con esos servicios depende de Google y de sus propias políticas.' },
+        { heading: '4. Contacto', text: 'Si necesitas información institucional sobre el monumento, horarios especiales o avisos públicos, consulta las fuentes oficiales enlazadas desde el sitio.' },
       ],
       backHome: 'Volver al inicio',
     },
     terms: {
-      title: 'Términos de Servicio Oficiales',
+      title: 'Términos de Servicio',
       lastUpdate: 'Última actualización: Marzo 2026',
-      intro: 'Este sitio web está gestionado por el Ayuntamiento de Toledo y la Junta de Comunidades de Castilla-La Mancha.',
+      intro: 'Estos términos regulan el uso de puertadebisagra.com como guía independiente para visitantes.',
       sections: [
-        { heading: '1. Aceptación de los términos', text: 'Al acceder a este sitio web de servicio público oficial, usted acepta estos términos, que rigen el uso de la información proporcionada por los gobiernos municipal y regional.' },
-        { heading: '2. Uso del contenido', text: 'La información proporcionada en este sitio web tiene fines de servicio público. El Ayuntamiento de Toledo garantiza la exactitud de la información histórica y turística en la medida de lo posible.' },
-        { heading: '3. Propiedad intelectual', text: 'Todo el contenido de este sitio, a menos que se indique lo contrario, es propiedad del Ayuntamiento de Toledo y está protegido por las leyes de derechos de autor. Se prohíbe el uso comercial no autorizado de este recurso público.' },
-        { heading: '4. Exención de responsabilidad de enlaces externos', text: 'Este sitio web contiene enlaces a servicios externos (como Google Maps) para ayudar a los visitantes. El Ayuntamiento de Toledo no se hace responsable del contenido, los términos o las prácticas de privacidad de estas plataformas externas.' },
+        { heading: '1. Aceptación de los términos', text: 'Al utilizar este sitio, aceptas usar su contenido como orientación general de viaje y visita.' },
+        { heading: '2. Uso del contenido', text: 'Intentamos mantener la información útil y actualizada, pero los accesos, rutas, obras o condiciones de visita pueden cambiar. Verifica los datos críticos en las fuentes oficiales antes de desplazarte.' },
+        { heading: '3. Propiedad intelectual', text: 'Salvo que se indique lo contrario, los textos originales y el diseño de este sitio no pueden reutilizarse con fines comerciales sin autorización.' },
+        { heading: '4. Exención sobre enlaces externos', text: 'Los enlaces a Google Maps, portales turísticos y webs institucionales se ofrecen como ayuda para el visitante. No controlamos su contenido, disponibilidad ni políticas.' },
       ],
       backHome: 'Volver al inicio',
     },
     cookies: {
-      title: 'Configuración de Cookies Oficial',
+      title: 'Configuración de Cookies',
       lastUpdate: 'Última actualización: Marzo 2026',
-      intro: 'Este sitio web está gestionado por el Ayuntamiento de Toledo y la Junta de Comunidades de Castilla-La Mancha.',
-      description: 'Utilizamos cookies para garantizar el funcionamiento seguro y eficiente de este sitio web de servicio público. Esto incluye cookies necesarias y cookies de terceros relacionadas con servicios integrados (como Google Maps).',
+      intro: 'Esta página describe las categorías de cookies que puede utilizar esta guía turística independiente.',
+      description: 'Usamos cookies esenciales para el funcionamiento del sitio y podemos apoyarnos en servicios de terceros como Google Maps para funciones de ubicación y planificación de rutas.',
       categories: [
-        { id: 'necessary', title: 'Cookies estrictamente necesarias', description: 'Esenciales para el funcionamiento básico de este sitio web oficial. No se pueden desactivar en nuestros sistemas.', required: true },
-        { id: 'analytics', title: 'Cookies de análisis', description: 'Utilizadas de forma anónima para medir el interés público y mejorar nuestros servicios municipales.', required: false },
+        { id: 'necessary', title: 'Cookies estrictamente necesarias', description: 'Imprescindibles para la funcionalidad básica del sitio.', required: true },
+        { id: 'analytics', title: 'Cookies de análisis', description: 'Pueden usarse para entender el uso del sitio y mejorar la experiencia del visitante.', required: false },
         { id: 'third-party', title: 'Servicios de Terceros (Google)', description: 'Cookies configuradas por servicios externos como Google Maps al interactuar con las funciones de ubicación.', required: false },
       ],
       backHome: 'Volver al inicio',
@@ -185,15 +186,35 @@ const langNames: Record<Lang, string> = {
 
 const BASE_URL = 'https://www.puertadebisagra.com';
 
+const PAGE_MAP = {
+  'privacy-policy': 'privacy',
+  'terms-of-service': 'terms',
+  'cookie-settings': 'cookies',
+} as const;
+
+function getPageKey(slug?: string[]) {
+  if (!slug || slug.length !== 1) {
+    return null;
+  }
+
+  return PAGE_MAP[slug[0] as keyof typeof PAGE_MAP] ?? null;
+}
+
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string; page: 'privacy-policy' | 'terms-of-service' | 'cookie-settings' }>;
+  params: Promise<{ lang: string; slug?: string[] }>;
 }): Promise<Metadata> {
-  const { lang, page } = await params;
+  const { lang, slug } = await params;
   const currentLang = (lang as Lang) || 'es';
-  const pageKey = page === 'privacy-policy' ? 'privacy' : page === 'terms-of-service' ? 'terms' : 'cookies';
+  const pageKey = getPageKey(slug);
+
+  if (!pageKey) {
+    return {};
+  }
+
   const data = content[currentLang]?.[pageKey] || content.es[pageKey];
+  const page = slug![0];
 
   const currentPath = `/${currentLang}/${page}`;
   const otherLangs: Lang[] = ['en', 'zh-Hant', 'fr', 'es'];
@@ -208,6 +229,10 @@ export async function generateMetadata({
 
   return {
     title: `${data.title} | Puerta de Bisagra`,
+    robots: {
+      index: false,
+      follow: true,
+    },
     alternates: {
       canonical: `${BASE_URL}${currentPath}`,
       languages: alternates,
@@ -223,14 +248,18 @@ export async function generateMetadata({
 export default async function LegalPage({
   params,
 }: {
-  params: Promise<{ lang: string; page: 'privacy-policy' | 'terms-of-service' | 'cookie-settings' }>;
+  params: Promise<{ lang: string; slug?: string[] }>;
 }) {
-  const { lang, page } = await params;
+  const { lang, slug } = await params;
   const currentLang = (lang as Lang) || 'es';
-  const pageKey = page === 'privacy-policy' ? 'privacy' : page === 'terms-of-service' ? 'terms' : 'cookies';
-  const data = content[currentLang]?.[pageKey] || content.es[pageKey];
+  const pageKey = getPageKey(slug);
 
-  const currentPath = `/${currentLang}/${page}`;
+  if (!pageKey) {
+    notFound();
+  }
+
+  const data = content[currentLang]?.[pageKey] || content.es[pageKey];
+  const page = slug![0];
   const otherLangs: Lang[] = ['en', 'zh-Hant', 'fr', 'es'];
 
   return (
