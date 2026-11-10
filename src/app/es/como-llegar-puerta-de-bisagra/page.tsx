@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function ComoLlegarPuertaBisagraPage() {
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-[#0b0b0b] py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto"><nav aria-label="Migas de pan" className="text-sm mb-6"><Link href="/es">Puerta de Bisagra</Link> / Guía de visita</nav>
         <Link
           href="/es"
           className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8"
@@ -50,8 +50,7 @@ export default function ComoLlegarPuertaBisagraPage() {
               </h2>
               <p>
                 Desde la estación de tren puedes llegar en taxi, en autobús urbano o caminando si
-                quieres convertir el desplazamiento en parte de la visita. La opción más cómoda
-                suele ser combinar transporte urbano con paseo final hacia Real del Arrabal.
+                quieres convertir el desplazamiento en parte de la visita. Compara las opciones según el equipaje, las pendientes y el itinerario que quieras recorrer. La FAQ municipal describe estas opciones para llegar al centro histórico; consulta la ruta concreta hasta Bisagra antes de salir.
               </p>
             </section>
 
@@ -60,12 +59,11 @@ export default function ComoLlegarPuertaBisagraPage() {
                 Desde la estación de autobuses
               </h2>
               <p>
-                La estación de autobuses queda relativamente cerca y permite llegar a la Puerta de
-                Bisagra en un trayecto corto. Es una opción práctica si llegas desde Madrid u
-                otras ciudades de Castilla-La Mancha.
+                La FAQ municipal indica que desde la estación de autobuses se puede llegar al centro histórico a pie, en taxi o en autobús urbano. Para dirigirte específicamente a Bisagra, abre el trazado actualizado desde la estación y compara los cruces, pendientes y accesos.
               </p>
             </section>
 
+            <p><a className="text-blue-600 underline" href="https://www.google.com/maps/dir/?api=1&origin=Estacion+de+Autobuses+de+Toledo&destination=Puerta+de+Bisagra+Toledo&travelmode=walking">Consultar ruta a pie desde la estación de autobuses hasta Bisagra ↗</a></p>
             <section>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                 Desde Plaza de Zocodover
@@ -107,6 +105,7 @@ export default function ComoLlegarPuertaBisagraPage() {
               </p>
             </section>
           </div>
+        <section className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6"><h2 className="text-xl font-bold mb-3">Fuentes y continuación de la visita</h2><p className="text-sm mb-4">Redacción: Guía Puerta de Bisagra · Revisión: 10 de noviembre de 2026.</p><p className="mb-4"><a className="text-blue-600 underline" href="https://turismo.toledo.es/prepara-tu-viaje/preguntas-frecuentes.html">Turismo Toledo: preguntas frecuentes sobre llegada y movilidad</a> · Consultado el 10 de noviembre de 2026. La información municipal se refiere al centro histórico; las rutas hasta Bisagra se consultan por separado.</p><p><a className="text-blue-600 underline" href="https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html">Turismo Toledo: Puerta de Bisagra</a> · <a className="text-blue-600 underline" href="https://www.spain.info/en/places-of-interest/puerta-nueva-bisagra/">Spain.info</a></p><nav className="flex flex-wrap gap-4 mt-5" aria-label="Visitas del entorno"><Link href="/es/santiago-del-arrabal" className="text-blue-600 underline">Santiago del Arrabal</Link><Link href="/es/mezquita-cristo-de-la-luz" className="text-blue-600 underline">Cristo de la Luz</Link><Link href="/es/puerta-del-sol-toledo" className="text-blue-600 underline">Puerta del Sol</Link><Link href="/es/hospital-de-tavera" className="text-blue-600 underline">Hospital de Tavera</Link></nav></section>
         </article>
 
         <section className="grid md:grid-cols-2 gap-6 mt-8">

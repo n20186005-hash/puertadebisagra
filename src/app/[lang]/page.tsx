@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { notFound } from "next/navigation";
+import VisitModules from "@/components/VisitModules";
 import Gallery from "@/components/Gallery";
 import Link from "next/link";
 import { dictionaries } from "@/i18n/dictionaries";
@@ -9,45 +10,6 @@ import { Metadata } from "next";
 
 const GOOGLE_MAPS_SHORT_LINK = "https://maps.app.goo.gl/EcXi7kGiSp2Ehgub8";
 const BASE_URL = "https://www.puertadebisagra.com";
-const SPANISH_GUIDE_SECTIONS = [
-  {
-    id: "historia",
-    title: "Historia de la Puerta de Bisagra",
-    paragraphs: [
-      "La historia de la Puerta de Bisagra empieza en época andalusí, cuando existía una puerta defensiva conocida como Bab al-Saqra. Su posición era estratégica: controlaba uno de los accesos más importantes a Toledo desde el norte y conectaba la ciudad amurallada con los caminos de entrada.",
-      "Durante el siglo XVI, en tiempos de Carlos V, el acceso fue profundamente transformado y adoptó la imagen renacentista que hoy identifica a la ciudad. La intervención se asocia a Alonso de Covarrubias y convirtió la antigua puerta en una fachada monumental, pensada tanto para defender como para representar el poder imperial.",
-      "Por eso, cuando alguien busca Puerta de Bisagra Toledo o Puerta Nueva de Bisagra, en realidad está buscando un monumento que resume varias etapas de la historia urbana de Toledo: la herencia islámica, la reforma cristiana y el papel simbólico de la ciudad dentro de la monarquía hispánica.",
-    ],
-  },
-  {
-    id: "arquitectura",
-    title: "Arquitectura y elementos que no debes perderte",
-    paragraphs: [
-      "La fachada exterior destaca por sus dos grandes torreones circulares y por el enorme escudo imperial de Carlos V con el águila bicéfala. Esa composición es una de las imágenes más reconocibles del patrimonio monumental toledano.",
-      "Al cruzar la puerta, el espacio interior se organiza en varios cuerpos con patio intermedio, arcos de paso y un trazado pensado para combinar función defensiva y solemnidad ceremonial. La diferencia entre la fachada exterior y la interior también ayuda a entender cómo evolucionó el acceso principal a la ciudad.",
-      "Si te interesa la arquitectura militar o la historia de las murallas de Toledo, merece la pena observar la relación de la puerta con el lienzo de muralla, el grosor de los volúmenes y la forma en que el conjunto domina la entrada al casco histórico.",
-    ],
-  },
-  {
-    id: "visita",
-    title: "Cómo visitar la Puerta de Bisagra",
-    paragraphs: [
-      "La visita es muy sencilla porque se trata de un monumento exterior y de paso libre. No hace falta entrada ni reserva, así que suele ser una parada natural al comenzar una ruta a pie por Toledo.",
-      "Muchos viajeros dedican entre 10 y 20 minutos a contemplar la puerta, hacer fotos y continuar hacia el casco histórico. Si quieres fotografiar la fachada con menos gente, la mejor hora suele ser a primera hora de la mañana o al final de la tarde.",
-      "La zona es cómoda para peatones y razonablemente accesible, aunque conviene recordar que Toledo tiene cuestas y pavimento histórico en buena parte del recorrido posterior hacia el centro.",
-    ],
-  },
-  {
-    id: "como-llegar",
-    title: "Cómo llegar a la Puerta de Bisagra",
-    paragraphs: [
-      "Desde la estación de tren de Toledo, puedes llegar en taxi, autobús urbano o caminando si quieres enlazar la visita con una ruta panorámica hacia el centro. Desde la estación de autobuses, el trayecto es aún más directo y corto.",
-      "Si vienes desde la Plaza de Zocodover, basta con bajar hacia Real del Arrabal para encontrar la puerta desde el interior del casco histórico. En coche, conviene revisar los aparcamientos cercanos antes de entrar en la zona monumental, ya que el tráfico dentro del centro histórico está limitado.",
-      "Como punto práctico de orientación, la dirección es C. Real del Arrabal, 26, 45003 Toledo, Spain, y el enlace corto de Google Maps es una buena referencia para navegación y consulta de rutas en tiempo real.",
-    ],
-  },
-];
-
 const SPANISH_CLUSTER_LINKS = [
   {
     href: "/es/historia-puerta-de-bisagra",
@@ -68,7 +30,8 @@ const SPANISH_CLUSTER_LINKS = [
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
-  const currentLang = lang || 'es';
+  if (!(lang in dictionaries)) notFound();
+  const currentLang = lang;
   const dict = dictionaries[currentLang as keyof typeof dictionaries] || dictionaries.es;
 
   const languages = ['es', 'en', 'zh-Hant', 'fr'];
@@ -102,7 +65,8 @@ export default async function LocalizedHome({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  const dict = dictionaries[lang as keyof typeof dictionaries] || dictionaries.es;
+  if (!(lang in dictionaries)) notFound();
+  const dict = dictionaries[lang as keyof typeof dictionaries];
   const showSpanishCluster = lang === "es";
   const structuredData = {
     "@context": "https://schema.org",
@@ -131,15 +95,15 @@ export default async function LocalizedHome({
         },
         geo: {
           "@type": "GeoCoordinates",
-          latitude: 39.8623177,
-          longitude: -4.0256734,
+          latitude: 39.8624573,
+          longitude: -4.0251876,
         },
       },
     ],
   };
 
   return (
-    <div className="min-h-screen transition-colors duration-300">
+    <div lang={lang} className="min-h-screen transition-colors duration-300">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -150,7 +114,7 @@ export default async function LocalizedHome({
       </header>
 
       <section
-        className="relative h-[65vh] min-h-[480px] w-full flex items-center justify-center overflow-hidden"
+        className="relative h-auto min-h-[480px] pt-28 pb-14 md:pt-24 md:pb-12 md:h-[65vh] w-full flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: "url('/gallery/images (1).jpg')",
           backgroundSize: "cover",
@@ -165,7 +129,7 @@ export default async function LocalizedHome({
           <p className="text-xl md:text-2xl mb-6 text-white/90 drop-shadow-md font-light">
             {dict.hero.subtitle}
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-4 mb-8 text-sm font-medium">
             <span className="px-4 py-2 bg-white/20 backdrop-blur-md rounded-full flex items-center gap-2">
               ⭐ {dict.hero.rating}
@@ -185,7 +149,7 @@ export default async function LocalizedHome({
         </div>
       </section>
 
-      <main className="max-w-5xl mx-auto px-4 py-20">
+      <main lang={lang} className="max-w-5xl mx-auto px-4 py-20">
         <section className="mb-24 text-center">
           <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-xl p-8 mb-12 max-w-4xl mx-auto shadow-sm">
             <h2 className="text-xl md:text-2xl font-bold text-blue-900 dark:text-blue-100 mb-4 flex items-center justify-center gap-2">
@@ -219,25 +183,9 @@ export default async function LocalizedHome({
           </div>
         </section>
 
+        <VisitModules lang={lang} />
         {showSpanishCluster && (
           <>
-            <section className="mb-24 space-y-10">
-              {SPANISH_GUIDE_SECTIONS.map((section) => (
-                <article
-                  key={section.id}
-                  id={section.id}
-                  className="rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-[#121212] p-8 shadow-sm"
-                >
-                  <h2 className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">{section.title}</h2>
-                  <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-8">
-                    {section.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
-                  </div>
-                </article>
-              ))}
-            </section>
-
             <section className="mb-24">
               <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">
                 Más guías sobre la Puerta de Bisagra
@@ -259,7 +207,7 @@ export default async function LocalizedHome({
         )}
 
         <section className="mb-24">
-          <Gallery 
+          <Gallery
             title={dict.gallery.title}
             description={dict.gallery.description}
             linkText={dict.gallery.linkText}
@@ -274,10 +222,10 @@ export default async function LocalizedHome({
         </section>
 
         <section className="mb-24">
-          <Reviews 
+          <Reviews
             title={dict.reviews.title}
-            declaration={dict.reviews.declaration}
-            reviews={dict.reviews.items}
+            declaration={({es: 'Google Maps: 4,7/5 · 12.097 reseñas. Consulta del 10 de noviembre de 2026; la cifra puede cambiar.', en: 'Google Maps: 4.7/5 · 12,097 reviews. Checked 10 November 2026; totals may change.', fr: 'Google Maps : 4,7/5 · 12 097 avis. Consultation du 10 novembre 2026 ; le total peut évoluer.', 'zh-Hant': 'Google Maps：4.7/5，共 12,097 則評論。2026 年 11 月 10 日查閱；數字可能變動。'} as Record<string,string>)[lang]}
+            reviews={[]}
             moreText={dict.reviews.moreText}
             googleMapsLink={GOOGLE_MAPS_SHORT_LINK}
           />
@@ -286,13 +234,14 @@ export default async function LocalizedHome({
         <section className="mb-24">
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-white">{dict.map.title}</h2>
           <div className="rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-800 h-[450px] relative">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3062.532093951985!2d-4.028248423096909!3d39.86231772153421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6a0ba8e10b3327%3A0x758f5e27c9442996!2sPuerta%20de%20Bisagra!5e0!3m2!1sen!2sus!4v1774594960452!5m2!1sen!2sus" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps?q=39.8624573,-4.0251876&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              title={dict.map.title}
               referrerPolicy="no-referrer-when-downgrade"
               className="absolute inset-0"
             />

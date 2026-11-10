@@ -4,13 +4,13 @@ import { useState, useCallback } from 'react';
 import Image from 'next/image';
 
 const images = Array.from({ length: 12 }, (_, i) => ({
-  src: `/gallery/images (${i + 1}).jpg`,
-  alt: `Gallery image ${i + 1}`,
+  src: `/gallery/images (${i === 1 ? 13 : i + 1}).jpg`,
+  alt: ["Muros y patio del entorno de Bisagra", "Puerta de Bisagra: torreones y escudo imperial", "Santiago del Arrabal con Bisagra al fondo", "Fachada del Hospital de Tavera", "Vista de la fachada interior de Bisagra", "Estatua de Carlos V en el patio de Bisagra", "Detalle arquitectónico de Bisagra y su entorno", "Vista del conjunto de Bisagra y sus alrededores", "Arquitectura de la puerta y sus muros", "Bisagra desde el espacio público", "Detalle del entorno monumental de Bisagra", "Otra perspectiva de Bisagra y sus alrededores"][i],
 }));
 
 const IMAGES_PER_PAGE = 6;
 const TOTAL_PAGES = Math.ceil(images.length / IMAGES_PER_PAGE);
-const GOOGLE_MAPS_LINK = 'https://maps.app.goo.gl/cEiGXn2e9Hx49wSs5';
+const GOOGLE_MAPS_LINK = 'https://maps.app.goo.gl/EcXi7kGiSp2Ehgub8';
 
 export default function Gallery({
   title,
