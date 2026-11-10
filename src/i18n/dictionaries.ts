@@ -2,28 +2,22 @@ export const dictionaries = {
   es: {
     seo: {
       title: 'Puerta de Bisagra Toledo: Historia, Visita y Cómo Llegar',
-      description: 'Descubre la Puerta de Bisagra de Toledo: historia, arquitectura, ubicación, acceso gratuito, cómo llegar y qué ver cerca de esta emblemática puerta de la ciudad.',
+      description: 'Descubre la Puerta de Bisagra de Toledo: historia, arquitectura, ubicación, visita exterior, cómo llegar y qué ver cerca de esta emblemática puerta de la ciudad.',
     },
     hero: {
       title: 'Puerta de Bisagra (Puerta Nueva de Bisagra), Toledo',
       subtitle: 'Historia, visita y cómo llegar a la puerta monumental de Toledo',
       rating: '4.7★ en Google Maps',
-      hours: 'Abierto 24 horas',
-      tags: ['Puerta Nueva de Bisagra', 'Toledo', 'Escudo de Carlos V', 'Murallas medievales', 'Acceso gratuito'],
+      hours: "Consulta los accesos antes de ir",
+      tags: ['Puerta Nueva de Bisagra', 'Toledo', 'Escudo de Carlos V', 'Murallas medievales', 'Arquitectura renacentista'],
     },
     intro: {
       officialManagementTitle: 'Guía independiente',
       officialManagement: 'puertadebisagra.com es una guía turística independiente para visitantes de Toledo. No somos el sitio oficial del Ayuntamiento de Toledo; los enlaces institucionales y recursos públicos se muestran más abajo como fuentes de consulta.',
       visitorInfoTitle: 'Información de Visita',
-      visitorInfo: 'La Puerta de Bisagra es una puerta monumental de acceso libre situada en C. Real del Arrabal, 26, 45003 Toledo. Se puede visitar a pie durante todo el día, sin entrada ni reserva, y es uno de los accesos más fotogénicos al casco histórico.',
+      visitorInfo: "La puerta monumental permite contemplar su arquitectura desde el entorno urbano. Consulta avisos locales antes de organizar una visita interior.",
       text: 'La Puerta de Bisagra, también llamada Puerta Nueva de Bisagra, es la entrada monumental más conocida de Toledo. Une la zona moderna con el casco antiguo y resume varias capas de la historia de la ciudad: origen andalusí, reconstrucción renacentista y un papel simbólico como puerta principal de las murallas toledanas.',
-      bullets: [
-        'Ubicación: entrada principal al casco histórico desde la zona de Real del Arrabal, muy cerca de estaciones y accesos por carretera.',
-        'Historia: origen musulmán en el siglo X y gran reconstrucción renacentista en el siglo XVI bajo Carlos V.',
-        'Arquitectura: dos grandes torreones circulares, patio interior y el famoso escudo imperial en la fachada exterior.',
-        'Visita: acceso gratuito, sin billete, ideal como primera parada antes de entrar al centro histórico.',
-        'Fotografía: luce especialmente bien a primera hora y al atardecer, cuando la luz resalta la piedra y las murallas.',
-      ],
+      bullets: ["Los restos de época musulmana se conservan en el segundo cuerpo interior. La reconstrucción renacentista siguió el proyecto de Covarrubias bajo Carlos V y Felipe II.", "Observa las fachadas y el patio; comprueba pendientes y pavimento si necesitas un recorrido sin escalones."],
     },
     gallery: {
       title: 'Galería de Fotos',
@@ -76,32 +70,26 @@ export const dictionaries = {
   'zh-Hant': {
     seo: {
       title: 'Puerta de Bisagra 比薩格拉門｜西班牙托萊多景點攻略',
-      description: '認識西班牙托萊多的 Puerta de Bisagra：歷史背景、建築特色、交通方式、免費參觀資訊與附近景點建議。',
+      description: '認識西班牙托萊多的 Puerta de Bisagra：歷史背景、建築特色、交通方式、外觀參觀資訊與附近景點建議。',
     },
     hero: {
       title: 'Puerta de Bisagra 比薩格拉門｜西班牙托萊多景點攻略',
       subtitle: '西班牙托萊多古城最宏偉的城門',
       rating: '4.7★ Google Maps 高分景點',
-      hours: '24小時開放',
+      hours: "出發前請確認通行狀況",
       tags: ['托萊多城門', '摩爾人起源', '查理五世徽章', '中世紀城牆', '三文化之城'],
     },
     intro: {
       officialManagementTitle: '獨立旅遊指南',
       officialManagement: 'puertadebisagra.com 是面向托萊多旅客的獨立旅遊資訊網站，並非托萊多市政府官方網站。頁面下方整理了官方旅遊與政府資料來源，方便交叉查證。',
       visitorInfoTitle: '參觀資訊',
-      visitorInfo: 'Puerta de Bisagra 是免費對外開放的古城門（Acceso gratuito），全天可步行參觀。無需門票，無需預約。建議結合托萊多古城牆步行遊覽，特別適合欣賞其文藝復興風格建築、外立面查理五世盾徽以及周邊城牆風光。',
+      visitorInfo: "可從周邊街區欣賞紀念性城門。安排內部參觀前請查閱當地公告。",
       text: 'Puerta de Bisagra（比薩格拉門，也稱新比薩格拉門）是托萊多最具代表性的古城門之一，也是通往老城區的重要入口。從伊斯蘭時期的城門雛形，到文藝復興時期的重建，它濃縮了托萊多城牆與城市發展的關鍵歷史。',
-      bullets: [
-        '位置印象：位於古城北側（Real del Arrabal街），從火車站或馬德里方向進入老城區的必經之路。',
-        '歷史沿革：源於10世紀摩爾人統治時期（Bab al-Saqra），1559年由建築師 Alonso de Covarrubias 以文藝復興風格重建。',
-        '建築特色：外觀如小型城堡，外側裝飾有神聖羅馬帝國皇帝查理五世的巨大雙頭鷹徽章，極具帝國氣勢。',
-        '結構設計：由兩個獨立的主體建築及內部庭院組成，兩側為巨大的圓柱形塔樓。',
-        '遊覽提示：作為公共歷史遺跡，本門為全天候免費開放的步行景點，適合所有年齡層參觀。',
-      ],
+      bullets: ["穆斯林時期遺存保留在第二座內側門體。文藝復興重建依 Covarrubias 的方案，在查理五世與腓力二世兩朝進行。", "比較兩側立面與庭院；如需無階梯動線，請先確認坡度與鋪面。"],
     },
     gallery: {
       title: '景點照片集',
-      description: '展示比薩格拉門建築細節與歷史風貌的官方圖集。如需查看具體位置及更多周邊影像，請點擊',
+      description: '展示比薩格拉門建築細節與歷史風貌的照片集。如需查看具體位置及更多周邊影像，請點擊',
       linkText: 'Google Maps',
       viewOriginal: '查看原圖',
       prevPage: '上一頁',
@@ -150,28 +138,22 @@ export const dictionaries = {
   en: {
     seo: {
       title: 'Puerta de Bisagra Toledo – History, Visitor Guide & Directions',
-      description: 'Plan your visit to Puerta de Bisagra in Toledo with history, architecture, free access details, directions and nearby sights.',
+      description: 'Plan your visit to Puerta de Bisagra in Toledo with history, architecture, exterior visit advice, directions and nearby sights.',
     },
     hero: {
       title: 'Puerta de Bisagra (Puerta Nueva de Bisagra), Toledo',
       subtitle: 'History, visitor guide and directions for Toledo\'s monumental gate',
       rating: '4.7★ on Google Maps',
-      hours: 'Open 24 hours',
+      hours: "Check access before visiting",
       tags: ['Toledo City Gate', 'Moorish Origin', 'Coat of Arms of Charles V', 'Medieval Walls', 'Imperial Entrance'],
     },
     intro: {
       officialManagementTitle: 'Independent Guide',
       officialManagement: 'puertadebisagra.com is an independent travel guide for visitors to Toledo. It is not the official website of Toledo City Council; official resources are linked below for reference.',
       visitorInfoTitle: 'Visitor Information',
-      visitorInfo: 'Puerta de Bisagra is a free-access ancient city gate, open to pedestrians all day. No tickets or reservations are required. We recommend combining your visit with a walking tour of the Toledo city walls, especially to admire its Renaissance architecture, the coat of arms of Charles V on the facade, and the surrounding wall scenery.',
+      visitorInfo: "Explore the monumental gate from its urban surroundings. Check local notices before planning interior access.",
       text: 'Puerta de Bisagra, also known as Puerta Nueva de Bisagra, is Toledo\'s best-known monumental gate and one of the main entrances to the old town. Its Moorish origins, Renaissance rebuilding and imposing imperial facade make it one of the city\'s most recognizable landmarks.',
-      bullets: [
-        'Location: Main entrance from Madrid or the train/bus stations, located near Real del Arrabal Street.',
-        'History: 10th-century Moorish origins (Bab al-Saqra), rebuilt in Renaissance style in 1559 by architect Alonso de Covarrubias.',
-        'Architecture: Miniature castle appearance featuring a giant double-headed eagle coat of arms of Emperor Charles V on the exterior.',
-        'Structure: Composed of two independent bodies with an inner courtyard, flanked by massive circular towers.',
-        'Accessibility: Wheelchair accessible entrance, ideal for all ages. Free open-air public monument.',
-      ],
+      bullets: ["Muslim-period remains survive in the second, inner body. Renaissance rebuilding followed Covarrubias’s design under Charles V and Philip II.", "Compare the facades and courtyard. Check slopes and paving if you need a step-free route."],
     },
     gallery: {
       title: 'Photo Gallery',
@@ -224,28 +206,22 @@ export const dictionaries = {
   fr: {
     seo: {
       title: 'Puerta de Bisagra Tolède : histoire, visite et accès',
-      description: 'Préparez votre visite de la Puerta de Bisagra à Tolède avec l\'histoire du monument, son architecture, l\'accès gratuit et les meilleurs itinéraires.',
+      description: 'Préparez votre visite de la Puerta de Bisagra à Tolède avec l\'histoire du monument, son architecture, la visite extérieure et les meilleurs itinéraires.',
     },
     hero: {
       title: 'Puerta de Bisagra (Puerta Nueva de Bisagra), Tolède',
       subtitle: 'La porte la plus magnifique de la vieille ville de Tolède',
       rating: '4.7★ sur Google Maps',
-      hours: 'Ouvert 24h/24',
+      hours: "Vérifiez les accès avant la visite",
       tags: ['Porte de ville', 'Origine mauresque', 'Armoiries de Charles Quint', 'Murailles médiévales', 'Entrée Impériale'],
     },
     intro: {
       officialManagementTitle: 'Guide indépendant',
       officialManagement: 'puertadebisagra.com est un guide touristique indépendant pour les visiteurs de Tolède. Ce n\'est pas le site officiel de la mairie ; les ressources institutionnelles sont listées plus bas.',
       visitorInfoTitle: 'Informations de Visite',
-      visitorInfo: 'La Puerta de Bisagra est une ancienne porte de la ville en accès gratuit, ouverte aux piétons toute la journée. Aucun billet ni réservation n\'est requis. Nous recommandons de combiner votre visite avec une promenade le long des murailles de Tolède, particulièrement pour admirer son architecture Renaissance, les armoiries de Charles Quint sur la façade et le paysage des murailles environnantes.',
+      visitorInfo: "Découvrez la porte monumentale depuis ses abords urbains. Consultez les avis locaux avant de prévoir une visite intérieure.",
       text: 'La Puerta de Bisagra, également appelée Puerta Nueva de Bisagra, est la porte monumentale la plus connue de Tolède. Entre origine andalouse, reconstruction Renaissance et façade impériale, elle résume une grande partie de l\'histoire urbaine de la ville.',
-      bullets: [
-        'Emplacement : Entrée principale depuis Madrid ou les gares (près de la rue Real del Arrabal).',
-        'Histoire : Origines mauresques du 10ème siècle (Bab al-Saqra), reconstruite en style Renaissance en 1559 par l\'architecte Alonso de Covarrubias.',
-        'Architecture : Apparence de château miniature avec d\'immenses armoiries de l\'aigle à deux têtes de l\'empereur Charles Quint.',
-        'Structure : Composée de deux corps indépendants avec une cour intérieure, flanquée de massives tours circulaires.',
-        'Accessibilité : Entrée accessible en fauteuil roulant, idéal pour tous les âges. Monument public en accès libre.',
-      ],
+      bullets: ["Des vestiges musulmans subsistent dans le second corps intérieur. La reconstruction Renaissance suit le projet de Covarrubias sous Charles Quint et Philippe II.", "Comparez les façades et la cour. Vérifiez les pentes et les pavés si vous avez besoin d’un accès sans marches."],
     },
     gallery: {
       title: 'Galerie Photo',

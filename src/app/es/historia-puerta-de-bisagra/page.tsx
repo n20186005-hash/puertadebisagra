@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 export default function HistoriaPuertaBisagraPage() {
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-[#0b0b0b] py-12 px-4">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto"><nav aria-label="Migas de pan" className="text-sm mb-6"><Link href="/es">Puerta de Bisagra</Link> / Guía de visita</nav>
         <Link
           href="/es"
           className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8"
@@ -40,10 +40,7 @@ export default function HistoriaPuertaBisagraPage() {
           <div className="space-y-5 text-gray-700 dark:text-gray-300 leading-8">
             <p>
               La Puerta de Bisagra de Toledo, conocida en su forma monumental actual como
-              Puerta Nueva de Bisagra, tiene una historia larga y compleja. Antes de la gran
-              reforma renacentista ya existía un acceso defensivo de época andalusí, asociado
-              a la antigua Bab al-Saqra, que controlaba uno de los puntos clave de entrada a la
-              ciudad.
+              Puerta Nueva de Bisagra, tiene una historia larga y compleja. La ficha municipal identifica restos musulmanes en el segundo cuerpo interior, que deben distinguirse del conjunto renacentista actual.
             </p>
             <p>
               Toledo fue una plaza estratégica durante siglos y sus puertas no eran solo pasos
@@ -52,7 +49,7 @@ export default function HistoriaPuertaBisagraPage() {
               necesidades militares y a nuevas formas de representación del poder.
             </p>
             <p>
-              En el siglo XVI, bajo el reinado de Carlos V, la puerta fue profundamente
+              En el siglo XVI, bajo los reinados de Carlos V y Felipe II, la puerta fue profundamente
               reconstruida y adquirió la imagen que hoy la hace tan reconocible. La intervención
               suele vincularse a Alonso de Covarrubias, uno de los nombres esenciales del
               Renacimiento toledano. El resultado fue una entrada solemne, monumental y cargada
@@ -91,6 +88,7 @@ export default function HistoriaPuertaBisagraPage() {
               sigue definiendo su imagen.
             </p>
           </div>
+        <section className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6"><h2 className="text-xl font-bold mb-3">Fuentes y continuación de la visita</h2><p className="text-sm mb-4">Redacción: Guía Puerta de Bisagra · Revisión: 10 de noviembre de 2026.</p><p><a className="text-blue-600 underline" href="https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html">Turismo Toledo: Puerta de Bisagra</a> · <a className="text-blue-600 underline" href="https://www.spain.info/en/places-of-interest/puerta-nueva-bisagra/">Spain.info</a></p><nav className="flex flex-wrap gap-4 mt-5" aria-label="Visitas del entorno"><Link href="/es/santiago-del-arrabal" className="text-blue-600 underline">Santiago del Arrabal</Link><Link href="/es/mezquita-cristo-de-la-luz" className="text-blue-600 underline">Cristo de la Luz</Link><Link href="/es/puerta-del-sol-toledo" className="text-blue-600 underline">Puerta del Sol</Link><Link href="/es/hospital-de-tavera" className="text-blue-600 underline">Hospital de Tavera</Link></nav></section>
         </article>
 
         <section className="grid md:grid-cols-2 gap-6 mt-8">

@@ -31,7 +31,7 @@ const comparisonRows = [
 export default function PuertaNuevaVsAntiguaPage() {
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-[#0b0b0b] py-12 px-4">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto"><nav aria-label="Migas de pan" className="text-sm mb-6"><Link href="/es">Puerta de Bisagra</Link> / Guía de visita</nav>
         <Link
           href="/es"
           className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-8"
@@ -98,6 +98,7 @@ export default function PuertaNuevaVsAntiguaPage() {
               Puerta Nueva; más bien la complementa para entender la evolución urbana de Toledo.
             </p>
           </div>
+        <section className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6"><h2 className="text-xl font-bold mb-3">Fuentes y continuación de la visita</h2><p className="text-sm mb-4">Redacción: Guía Puerta de Bisagra · Revisión: 10 de noviembre de 2026.</p><p><a className="text-blue-600 underline" href="https://turismo.toledo.es/recursos/museos-y-monumentos/id1509-puerta-de-bisagra.html">Turismo Toledo: Puerta de Bisagra</a> · <a className="text-blue-600 underline" href="https://www.spain.info/en/places-of-interest/puerta-nueva-bisagra/">Spain.info</a></p><nav className="flex flex-wrap gap-4 mt-5" aria-label="Visitas del entorno"><Link href="/es/santiago-del-arrabal" className="text-blue-600 underline">Santiago del Arrabal</Link><Link href="/es/mezquita-cristo-de-la-luz" className="text-blue-600 underline">Cristo de la Luz</Link><Link href="/es/puerta-del-sol-toledo" className="text-blue-600 underline">Puerta del Sol</Link><Link href="/es/hospital-de-tavera" className="text-blue-600 underline">Hospital de Tavera</Link></nav></section>
         </article>
 
         <section className="grid md:grid-cols-2 gap-6 mt-8">

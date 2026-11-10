@@ -1,0 +1,23 @@
+{
+  "name": "puertadebisagra-preview-toolchain",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "cd .. && cloudflare-preview/node_modules/.bin/opennextjs-cloudflare build --config wrangler.preview.jsonc --openNextConfigPath cloudflare-preview/open-next.config.mjs",
+    "check": "cd .. && cloudflare-preview/node_modules/.bin/wrangler deploy --dry-run --config wrangler.preview.jsonc --outdir .open-next/dry-run",
+    "dev": "cd .. && cloudflare-preview/node_modules/.bin/wrangler dev --local --config wrangler.preview.jsonc"
+  },
+  "dependencies": {
+    "@opennextjs/cloudflare": "1.20.7",
+    "next": "16.3.6",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "wrangler": "4.159.0"
+  },
+  "allowScripts": {
+    "esbuild@0.25.4": true,
+    "esbuild@0.28.2": true,
+    "workerd@1.20261109.1": true,
+    "fsevents@2.3.3": true
+  }
+}

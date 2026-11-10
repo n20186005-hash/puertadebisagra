@@ -44,7 +44,7 @@ const content: Record<Lang, Record<string, {
       title: 'Cookie Settings',
       lastUpdate: 'Last updated: March 2026',
       intro: 'This page describes the cookie categories used by this independent travel guide.',
-      description: 'We use essential cookies to keep the site functioning and may rely on third-party services such as Google Maps for route planning and location features.',
+      description: 'The site loads Google advertising and embeds Google Maps. These third-party services are governed by their own policies.',
       categories: [
         { id: 'necessary', title: 'Strictly Necessary Cookies', description: 'Required for the core functionality of the website.', required: true },
         { id: 'analytics', title: 'Analytics Cookies', description: 'May be used to understand site usage and improve the visitor experience.', required: false },
@@ -164,7 +164,7 @@ const content: Record<Lang, Record<string, {
       title: 'Configuración de Cookies',
       lastUpdate: 'Última actualización: Marzo 2026',
       intro: 'Esta página describe las categorías de cookies que puede utilizar esta guía turística independiente.',
-      description: 'Usamos cookies esenciales para el funcionamiento del sitio y podemos apoyarnos en servicios de terceros como Google Maps para funciones de ubicación y planificación de rutas.',
+      description: 'El sitio carga publicidad de Google y muestra Google Maps. Estos servicios de terceros se rigen por sus propias políticas.',
       categories: [
         { id: 'necessary', title: 'Cookies estrictamente necesarias', description: 'Imprescindibles para la funcionalidad básica del sitio.', required: true },
         { id: 'analytics', title: 'Cookies de análisis', description: 'Pueden usarse para entender el uso del sitio y mejorar la experiencia del visitante.', required: false },
@@ -206,11 +206,12 @@ export async function generateMetadata({
   params: Promise<{ lang: string; slug?: string[] }>;
 }): Promise<Metadata> {
   const { lang, slug } = await params;
-  const currentLang = (lang as Lang) || 'es';
+  if (!(lang in content)) notFound();
+  const currentLang = lang as Lang;
   const pageKey = getPageKey(slug);
 
   if (!pageKey) {
-    return {};
+    return { robots: { index: false, follow: false } };
   }
 
   const data = content[currentLang]?.[pageKey] || content.es[pageKey];
@@ -251,7 +252,8 @@ export default async function LegalPage({
   params: Promise<{ lang: string; slug?: string[] }>;
 }) {
   const { lang, slug } = await params;
-  const currentLang = (lang as Lang) || 'es';
+  if (!(lang in content)) notFound();
+  const currentLang = lang as Lang;
   const pageKey = getPageKey(slug);
 
   if (!pageKey) {
@@ -263,7 +265,7 @@ export default async function LegalPage({
   const otherLangs: Lang[] = ['en', 'zh-Hant', 'fr', 'es'];
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div lang={lang} className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
         <Link href={`/${lang}`} className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6 transition-colors">
           <span>←</span>
@@ -293,23 +295,7 @@ export default async function LegalPage({
         {'description' in data && (
           <>
             <p className="text-gray-600 mb-8">{data.description}</p>
-            <div className="space-y-6">
-              {data.categories?.map((category) => (
-                <div key={category.id} className="flex items-start gap-4 p-4 bg-gray-50 rounded-lg">
-                  <div className="flex-1">
-                    <h3 className="font-semibold mb-1">{category.title}</h3>
-                    <p className="text-sm text-gray-600">{category.description}</p>
-                  </div>
-                  <div className={`relative w-14 h-7 rounded-full ${category.required ? 'bg-gray-400' : 'bg-blue-600'}`}>
-                    <span className={`absolute top-1 w-5 h-5 bg-white rounded-full ${category.required ? '' : 'translate-x-8'}`} />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="flex gap-4 mt-8">
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">{data.acceptAll}</button>
-              <button className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors">{data.rejectAll}</button>
-            </div>
+            <p className="text-gray-600 leading-relaxed">{({ es: 'Esta página es informativa y no guarda preferencias. El sitio carga publicidad de Google y muestra un mapa de Google; estos servicios pueden tratar datos según sus propias políticas. Puedes gestionar permisos en tu navegador.', en: 'This page is informational and does not save preferences. The site loads Google advertising and displays a Google map; those services may process data under their own policies. Manage permissions in your browser.', fr: 'Cette page est informative et ne mémorise aucun choix. Le site charge la publicité Google et une carte Google ; ces services peuvent traiter des données selon leurs propres politiques. Gérez les autorisations dans votre navigateur.', 'zh-Hant': '本頁僅提供說明，不會儲存偏好。網站載入 Google 廣告並顯示 Google 地圖；相關服務可能依自身政策處理資料。請在瀏覽器管理權限。' } as Record<string,string>)[lang]}</p>
           </>
         )}
 
